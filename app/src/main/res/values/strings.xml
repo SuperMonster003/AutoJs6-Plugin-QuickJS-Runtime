@@ -1,0 +1,3 @@
+<resources>
+    <string name="plugin_description">Runs JavaScript with the independent QuickJS engine</string>
+</resources>

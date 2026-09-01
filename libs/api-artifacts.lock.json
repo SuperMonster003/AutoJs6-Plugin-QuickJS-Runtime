@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "sourceRepository": "https://github.com/SuperMonster003/AutoJs6",
+  "artifacts": [
+    {
+      "path": "libs/common-plugin-api.aar",
+      "sha256": "f9ff9676543f45b2ff2b64bb832d377dbd5b7003acf3bb4239e98556c68b246f",
+      "size": 10578,
+      "sourceModule": ":plugin-api:common-plugin-api",
+      "sourceHostVersion": "6.8.0",
+      "sourceHostVersionCode": 5278
+    }
+  ]
+}

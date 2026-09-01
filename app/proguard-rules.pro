@@ -1,0 +1,4 @@
+-keep class org.autojs.plugin.quickjs.runtime.api.** { *; }
+-keep class org.autojs.plugin.common.api.** { *; }
+-keep class io.github.supermonster003.autojs6.plugin.quickjs.runtime.** extends android.app.Service { *; }
+-keep class io.github.supermonster003.autojs6.plugin.quickjs.runtime.** extends android.app.Activity { *; }
