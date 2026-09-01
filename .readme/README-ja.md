@@ -123,7 +123,7 @@ default stack limit: 1 MiB
 
 `QuickJsRuntimeService` は action `org.autojs.plugin.quickjs.RUNTIME` と category `quickjs` で検出されます. `runScript` は request Bundle と read-only source descriptor を受け取り, bounded stdout と stderr event を callback で stream し, status, timing, diagnostic を含む terminal Bundle を返します. `cancelScript` は dispatch の前後で安全に呼べ, `prewarmRuntime` は native engine readiness を確認します.
 
-16 KB 状態: native linker は 16 KB maximum page size に設定され, APK verifier は各 ELF PT_LOAD alignment と uncompressed ZIP data alignment を確認します. 実際の 16 KB page-size 端末または emulator ではまだ実行していないため, end-to-end support は表明しません.
+16 KB 状態: native linker は 16 KB maximum page size に設定され, APK verifier は各 ELF PT_LOAD alignment と uncompressed ZIP data alignment を確認します. `PAGE_SIZE=16384` を報告する API 37 x86_64 `google_apis_ps16k` emulator で end-to-end 実行を検証し, Binder と QuickJS の 3 件の instrumentation suite がすべて成功しました.
 
 ******
 
@@ -143,7 +143,7 @@ _2026/09/02_
 - `機能` Wake activation, 完全な PluginInfo metadata, 10 言語の instruction, README, changelog を提供します
 - `改善` 隔離された `:quickjs_runtime` process で request ごとに新しい `JSRuntime` と `JSContext` を作成し, `quickjs-libc`, filesystem helper, network helper を除外します
 - `改善` 公式 byte-exact source を archive URL, archive SHA-256, upstream commit, 各 file size, 各 SHA-256 で固定します
-- `改善` Native library を 16 KB alignment で build し, ELF PT_LOAD と uncompressed APK data alignment を検証しつつ, 実際の 16 KB page test が未完了であることを記録します
+- `改善` Native library を 16 KB alignment で build し, ELF PT_LOAD と uncompressed APK data alignment を検証したうえで, `PAGE_SIZE=16384` の API 37 x86_64 `google_apis_ps16k` emulator における Binder と QuickJS の 3 件の instrumentation suite をすべて成功させます
 - `改善` 実際の Android 9, 12, 13, 15 arm64 device で runtime を確認し, JVM test, instrumentation test, Android Lint, source verification, APK inventory check を追加します
 - `依存関係` MIT license の公式 QuickJS 2026-06-04 source を commit [`3d5e064e9dd67c70f7962836505a7fa067bf0a4e`](https://github.com/bellard/quickjs/commit/3d5e064e9dd67c70f7962836505a7fa067bf0a4e) から埋め込みます
 

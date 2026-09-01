@@ -35,7 +35,7 @@
   "h3_plugin_interface": "Plugin Interface",
   "p_plugin_interface": "Stable identifiers and limits for AutoJs6 host and plugin developers",
   "p_contract": "`QuickJsRuntimeService` is discovered by action `{{ plugin_service_action }}` and category `{{ plugin_service_category }}`. `runScript` receives a request Bundle and a read-only source descriptor, streams bounded stdout and stderr events through the callback, and returns a terminal Bundle containing status, timing, and diagnostics. `cancelScript` is safe before or during dispatch, and `prewarmRuntime` performs a native engine readiness check.",
-  "p_16kb_status": "16 KB status: the native linker is configured for 16 KB maximum page size, and the APK verifier checks each ELF PT_LOAD alignment plus uncompressed ZIP data alignment. No real 16 KB page-size device or emulator run has been completed, so end-to-end 16 KB runtime support is not claimed yet.",
+  "p_16kb_status": "16 KB status: the native linker is configured for 16 KB maximum page size, and the APK verifier checks each ELF PT_LOAD alignment plus uncompressed ZIP data alignment. End-to-end execution was validated on an API 37 x86_64 `google_apis_ps16k` emulator reporting `PAGE_SIZE=16384`; all three Binder and QuickJS instrumentation suites passed.",
   "h3_release_history": "Release History",
   "h5_more_release_history": "For more release history",
   "h3_build": "Build and Verification",

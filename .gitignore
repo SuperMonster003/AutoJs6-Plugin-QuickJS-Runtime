@@ -7,6 +7,7 @@
 *.ffs_db
 *.patch
 *.salive
+*.py[cod]
 .tmp_*.txt
 
 .DS_Store
@@ -20,6 +21,7 @@ desktop.ini
 .git/
 .gradle/
 .hprof/
+__pycache__/
 
 !.run
 
@@ -42,6 +44,8 @@ desktop.ini
 !/tools/quickjs/
 !/tools/quickjs/**
 !/tools/verify-api-artifacts.mjs
+/tools/quickjs/**/__pycache__/
+/tools/quickjs/**/*.py[cod]
 
 /gradle/wrappers/backup/
 

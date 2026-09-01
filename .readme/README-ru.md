@@ -123,7 +123,7 @@ default stack limit: 1 MiB
 
 `QuickJsRuntimeService` обнаруживается по action `org.autojs.plugin.quickjs.RUNTIME` и category `quickjs`. `runScript` принимает request Bundle и read-only descriptor исходника, передает ограниченные события stdout и stderr через callback и возвращает terminal Bundle со статусом, временем и диагностикой. `cancelScript` безопасен до и во время dispatch, а `prewarmRuntime` проверяет готовность native engine.
 
-Статус 16 KB: native linker настроен на максимальный размер страницы 16 KB, а APK verifier проверяет PT_LOAD alignment каждого ELF и alignment несжатых ZIP данных. Проверка на реальном устройстве или emulator со страницами 16 KB еще не выполнена, поэтому полная поддержка не заявляется.
+Статус 16 KB: native linker настроен на максимальный размер страницы 16 KB, а APK verifier проверяет PT_LOAD alignment каждого ELF и alignment несжатых ZIP данных. Сквозное выполнение проверено на x86_64 emulator `google_apis_ps16k` с API 37 и `PAGE_SIZE=16384`; все три набора instrumentation-тестов Binder и QuickJS успешно пройдены.
 
 ******
 
@@ -143,7 +143,7 @@ _2026/09/02_
 - `Функция` Предоставляет Wake activation, полные metadata PluginInfo, инструкции, README и changelog на 10 языках
 - `Улучшение` Создает новые `JSRuntime` и `JSContext` для каждого запроса в изолированном процессе `:quickjs_runtime` и исключает `quickjs-libc`, filesystem helpers и network helpers
 - `Улучшение` Фиксирует побайтово точные официальные source files по URL, SHA-256 архива, upstream commit, размеру и SHA-256 каждого файла
-- `Улучшение` Собирает native libraries с alignment 16 KB и проверяет ELF PT_LOAD и uncompressed APK data alignment, отмечая отсутствие реального теста с размером страниц 16 KB
+- `Улучшение` Собирает native libraries с alignment 16 KB, проверяет ELF PT_LOAD и uncompressed APK data alignment и успешно проходит все три набора instrumentation-тестов Binder и QuickJS на x86_64 emulator `google_apis_ps16k` с API 37 и `PAGE_SIZE=16384`
 - `Улучшение` Проверяет runtime на реальных arm64 устройствах Android 9, 12, 13 и 15, а также JVM tests, instrumentation tests, Android Lint, source verification и APK inventory
 - `Зависимость` Встраивает официальные исходники QuickJS 2026-06-04 под MIT из commit [`3d5e064e9dd67c70f7962836505a7fa067bf0a4e`](https://github.com/bellard/quickjs/commit/3d5e064e9dd67c70f7962836505a7fa067bf0a4e)
 

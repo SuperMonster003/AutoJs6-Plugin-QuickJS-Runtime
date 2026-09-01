@@ -16,6 +16,6 @@
 * `機能` Wake activation, 完全な PluginInfo metadata, 10 言語の instruction, README, changelog を提供します
 * `改善` 隔離された `:quickjs_runtime` process で request ごとに新しい `JSRuntime` と `JSContext` を作成し, `quickjs-libc`, filesystem helper, network helper を除外します
 * `改善` 公式 byte-exact source を archive URL, archive SHA-256, upstream commit, 各 file size, 各 SHA-256 で固定します
-* `改善` Native library を 16 KB alignment で build し, ELF PT_LOAD と uncompressed APK data alignment を検証しつつ, 実際の 16 KB page test が未完了であることを記録します
+* `改善` Native library を 16 KB alignment で build し, ELF PT_LOAD と uncompressed APK data alignment を検証したうえで, `PAGE_SIZE=16384` の API 37 x86_64 `google_apis_ps16k` emulator における Binder と QuickJS の 3 件の instrumentation suite をすべて成功させます
 * `改善` 実際の Android 9, 12, 13, 15 arm64 device で runtime を確認し, JVM test, instrumentation test, Android Lint, source verification, APK inventory check を追加します
 * `依存関係` MIT license の公式 QuickJS 2026-06-04 source を commit [`3d5e064e9dd67c70f7962836505a7fa067bf0a4e`](https://github.com/bellard/quickjs/commit/3d5e064e9dd67c70f7962836505a7fa067bf0a4e) から埋め込みます

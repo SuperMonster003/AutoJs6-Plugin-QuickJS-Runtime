@@ -123,7 +123,7 @@ default stack limit: 1 MiB
 
 `QuickJsRuntimeService` est découvert par l'action `org.autojs.plugin.quickjs.RUNTIME` et la catégorie `quickjs`. `runScript` reçoit un Bundle de requête et un descripteur source en lecture seule, diffuse des événements stdout et stderr bornés via callback et renvoie un Bundle terminal avec état, durée et diagnostics. `cancelScript` est sûr avant ou pendant l'envoi et `prewarmRuntime` vérifie la disponibilité du moteur natif.
 
-État 16 KB: le linker natif est configuré pour une taille de page maximale de 16 KB et le vérificateur APK contrôle l'alignement PT_LOAD de chaque ELF ainsi que les données ZIP non compressées. Aucun appareil ou émulateur réel à pages de 16 KB n'a été testé; le support complet n'est donc pas revendiqué.
+État 16 KB: le linker natif est configuré pour une taille de page maximale de 16 KB et le vérificateur APK contrôle l'alignement PT_LOAD de chaque ELF ainsi que les données ZIP non compressées. L'exécution de bout en bout a été validée sur un émulateur x86_64 `google_apis_ps16k` API 37 indiquant `PAGE_SIZE=16384`; les trois suites d'instrumentation Binder et QuickJS ont réussi.
 
 ******
 
@@ -143,7 +143,7 @@ _2026/09/02_
 - `Fonctionnalité` Fournit activation Wake, métadonnées PluginInfo complètes, instructions, README et changelog dans 10 langues
 - `Amélioration` Crée un `JSRuntime` et un `JSContext` neufs par requête dans le processus isolé `:quickjs_runtime` et omet `quickjs-libc` ainsi que les helpers fichiers et réseau
 - `Amélioration` Fixe les sources officielles identiques octet par octet par URL, SHA-256 d'archive, commit upstream, taille et SHA-256 de chaque fichier
-- `Amélioration` Compile les bibliothèques natives avec alignement 16 KB et vérifie ELF PT_LOAD et données APK non compressées, tout en notant l'absence de test réel sur pages de 16 KB
+- `Amélioration` Compile les bibliothèques natives avec alignement 16 KB, vérifie ELF PT_LOAD et données APK non compressées, puis réussit les trois suites d'instrumentation Binder et QuickJS sur un émulateur x86_64 `google_apis_ps16k` API 37 avec `PAGE_SIZE=16384`
 - `Amélioration` Couvre le runtime sur appareils arm64 réels Android 9, 12, 13 et 15, plus tests JVM et instrumentation, Android Lint, vérification source et inventaire APK
 - `Dépendance` Intègre les sources officielles QuickJS 2026-06-04 sous licence MIT au commit [`3d5e064e9dd67c70f7962836505a7fa067bf0a4e`](https://github.com/bellard/quickjs/commit/3d5e064e9dd67c70f7962836505a7fa067bf0a4e)
 

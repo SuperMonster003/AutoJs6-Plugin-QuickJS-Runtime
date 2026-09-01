@@ -20,7 +20,7 @@
       "improvement": [
         "Create a fresh `JSRuntime` and `JSContext` per request in the isolated `:quickjs_runtime` process and omit `quickjs-libc` plus filesystem and network helpers",
         "Pin byte-exact official source files by archive URL, archive SHA-256, upstream commit, individual file sizes, and individual SHA-256 digests",
-        "Build native libraries with 16 KB page alignment and verify ELF PT_LOAD plus uncompressed APK data alignment, while recording that no real 16 KB page-size runtime test has been completed",
+        "Build native libraries with 16 KB page alignment, verify ELF PT_LOAD and uncompressed APK data alignment, and pass all three Binder and QuickJS instrumentation suites on an API 37 x86_64 `google_apis_ps16k` emulator reporting `PAGE_SIZE=16384`",
         "Cover runtime behavior on real Android 9, 12, 13, and 15 arm64 devices, with JVM tests, instrumentation tests, Android Lint, source verification, and APK inventory checks"
       ],
       "dependency": [

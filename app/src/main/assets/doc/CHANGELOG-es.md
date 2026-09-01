@@ -16,6 +16,6 @@
 * `Función` Incluye activación Wake, metadatos PluginInfo completos e instrucciones, README y changelog en 10 idiomas
 * `Mejora` Crea `JSRuntime` y `JSContext` nuevos por solicitud en el proceso aislado `:quickjs_runtime` y omite `quickjs-libc` y helpers de archivos y red
 * `Mejora` Fija fuentes oficiales idénticas byte a byte por URL, SHA-256 del archivo, commit upstream, tamaño y SHA-256 de cada archivo
-* `Mejora` Compila bibliotecas nativas con alineación de 16 KB y verifica ELF PT_LOAD y datos APK sin comprimir, dejando constancia de que aún no existe prueba real con páginas de 16 KB
+* `Mejora` Compila bibliotecas nativas con alineación de 16 KB, verifica ELF PT_LOAD y datos APK sin comprimir, y supera las tres suites de instrumentación de Binder y QuickJS en un emulador x86_64 `google_apis_ps16k` con API 37 y `PAGE_SIZE=16384`
 * `Mejora` Cubre el runtime en dispositivos arm64 reales Android 9, 12, 13 y 15, además de pruebas JVM e instrumentación, Android Lint, verificación de fuentes e inventario APK
 * `Dependencia` Integra las fuentes oficiales QuickJS 2026-06-04 con licencia MIT del commit [`3d5e064e9dd67c70f7962836505a7fa067bf0a4e`](https://github.com/bellard/quickjs/commit/3d5e064e9dd67c70f7962836505a7fa067bf0a4e)

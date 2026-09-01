@@ -20,7 +20,7 @@
       "improvement": [
         "在隔离的 `:quickjs_runtime` 进程中为每个请求创建全新 `JSRuntime` 和 `JSContext`, 并且不编译 `quickjs-libc` 及文件系统和网络辅助代码",
         "按归档 URL, 归档 SHA-256, 上游 commit, 单文件大小和单文件 SHA-256 固定逐字节一致的官方源码",
-        "以 16 KB 页面对齐构建原生库, 并验证 ELF PT_LOAD 以及 APK 未压缩数据对齐, 同时明确记录尚未完成真实 16 KB 页面大小运行测试",
+        "以 16 KB 页面对齐构建原生库, 验证 ELF PT_LOAD 与 APK 未压缩数据对齐, 并在报告 `PAGE_SIZE=16384` 的 API 37 x86_64 `google_apis_ps16k` 模拟器上通过全部 3 组 Binder 与 QuickJS 仪器测试",
         "在真实 Android 9, 12, 13 和 15 arm64 设备上覆盖 runtime 行为, 并提供 JVM 测试, instrumentation 测试, Android Lint, 源码验证和 APK 清单检查"
       ],
       "dependency": [

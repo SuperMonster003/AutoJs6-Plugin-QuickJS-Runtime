@@ -16,6 +16,6 @@
 * `Feature` Provide Wake activation, complete PluginInfo metadata, plugin-center instructions, README, and changelog content in 10 languages
 * `Improvement` Create a fresh `JSRuntime` and `JSContext` per request in the isolated `:quickjs_runtime` process and omit `quickjs-libc` plus filesystem and network helpers
 * `Improvement` Pin byte-exact official source files by archive URL, archive SHA-256, upstream commit, individual file sizes, and individual SHA-256 digests
-* `Improvement` Build native libraries with 16 KB page alignment and verify ELF PT_LOAD plus uncompressed APK data alignment, while recording that no real 16 KB page-size runtime test has been completed
+* `Improvement` Build native libraries with 16 KB page alignment, verify ELF PT_LOAD and uncompressed APK data alignment, and pass all three Binder and QuickJS instrumentation suites on an API 37 x86_64 `google_apis_ps16k` emulator reporting `PAGE_SIZE=16384`
 * `Improvement` Cover runtime behavior on real Android 9, 12, 13, and 15 arm64 devices, with JVM tests, instrumentation tests, Android Lint, source verification, and APK inventory checks
 * `Dependency` Embed the MIT-licensed official QuickJS 2026-06-04 source at commit [`3d5e064e9dd67c70f7962836505a7fa067bf0a4e`](https://github.com/bellard/quickjs/commit/3d5e064e9dd67c70f7962836505a7fa067bf0a4e)

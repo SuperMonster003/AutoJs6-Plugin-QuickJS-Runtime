@@ -16,6 +16,6 @@
 * `功能` 提供 Wake 啟用, 完整 PluginInfo metadata, 以及 10 種語言的外掛中心說明, README 和 changelog
 * `改善` 在隔離的 `:quickjs_runtime` 程序中為每個請求建立全新 `JSRuntime` 和 `JSContext`, 並且不編譯 `quickjs-libc` 及檔案系統和網路 helper
 * `改善` 按 archive URL, archive SHA-256, upstream commit, 單檔大小和單檔 SHA-256 固定逐 byte 一致的官方原始碼
-* `改善` 以 16 KB page alignment 建置原生 library, 並驗證 ELF PT_LOAD 以及 APK 未壓縮 data alignment, 同時清楚記錄尚未完成真實 16 KB page size runtime 測試
+* `改善` 以 16 KB page alignment 建置原生 library, 驗證 ELF PT_LOAD 與 APK 未壓縮 data alignment, 並在回報 `PAGE_SIZE=16384` 的 API 37 x86_64 `google_apis_ps16k` emulator 上通過全部 3 組 Binder 與 QuickJS instrumentation 測試
 * `改善` 在真實 Android 9, 12, 13 和 15 arm64 裝置上涵蓋 runtime 行為, 並提供 JVM test, instrumentation test, Android Lint, source verification 和 APK inventory check
 * `相依項目` 內嵌採用 MIT 授權的官方 QuickJS 2026-06-04 原始碼, 對應 commit [`3d5e064e9dd67c70f7962836505a7fa067bf0a4e`](https://github.com/bellard/quickjs/commit/3d5e064e9dd67c70f7962836505a7fa067bf0a4e)
