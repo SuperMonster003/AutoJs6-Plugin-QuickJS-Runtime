@@ -9,6 +9,11 @@
     "archiveSha256": "b376e839b322978313d929fd20663b11ba58b75df5a46c126dd19ea2fa70ad2a",
     "license": "MIT"
   },
+  "androidBuild": {
+    "minimumSupportedApi": 24,
+    "ndkVersion": "28.2.13676358",
+    "minimumElfPageAlignment": 16384
+  },
   "vendorRoot": "app/src/main/cpp/vendor/quickjs-2026-06-04",
   "files": [
     {"path": "quickjs.c", "bytes": 2020354, "sha256": "a00762d2eee42316cecbc9c15efc4549b715ec500461845cd91b2a6c38190d08"},

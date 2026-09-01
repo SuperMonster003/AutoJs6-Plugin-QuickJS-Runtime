@@ -1,0 +1,3 @@
+<resources>
+    <string name="plugin_description">独立した Android プロセスで独立 QuickJS エンジンを使用して JavaScript を実行</string>
+</resources>

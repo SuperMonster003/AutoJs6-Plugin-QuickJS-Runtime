@@ -1,0 +1,31 @@
+{
+  "changelog_label_hint": "Hint",
+  "changelog_label_feature": "Feature",
+  "changelog_label_fix": "Fix",
+  "changelog_label_improvement": "Improvement",
+  "changelog_label_dependency": "Dependency",
+  "$data": {
+    "v1.0.0": {
+      "released_date": "2026/09/02",
+      "hint": [
+        "The first release accepts one immutable JavaScript source snapshot and deliberately provides no AutoJs6 globals, Java bridge, filesystem, network, timers, native addons, or multi-file imports"
+      ],
+      "feature": [
+        "Run JavaScript through the embedded official QuickJS {{ quickjs_version }} engine selected by the `\"quickjs\";` directive, without forwarding execution to Rhino, Node.js, or Bun",
+        "Discover a protected runtime service through a versioned AIDL contract, transfer source with `ParcelFileDescriptor`, and stream bounded stdout and stderr events through oneway callbacks",
+        "Support scripts and single-file ES modules with BigInt, Unicode, Promise jobs, module top-level await, errors, timeout, output limits, memory and stack limits, cancellation, and prewarming",
+        "Ship `arm64-v8a`, `armeabi-v7a`, `x86_64`, `x86`, and `universal` APKs with the same native engine contract",
+        "Provide Wake activation, complete PluginInfo metadata, plugin-center instructions, README, and changelog content in 10 languages"
+      ],
+      "improvement": [
+        "Create a fresh `JSRuntime` and `JSContext` per request in the isolated `:quickjs_runtime` process and omit `quickjs-libc` plus filesystem and network helpers",
+        "Pin byte-exact official source files by archive URL, archive SHA-256, upstream commit, individual file sizes, and individual SHA-256 digests",
+        "Build native libraries with 16 KB page alignment and verify ELF PT_LOAD plus uncompressed APK data alignment, while recording that no real 16 KB page-size runtime test has been completed",
+        "Cover runtime behavior on real Android 9, 12, 13, and 15 arm64 devices, with JVM tests, instrumentation tests, Android Lint, source verification, and APK inventory checks"
+      ],
+      "dependency": [
+        "Embed the MIT-licensed official QuickJS {{ quickjs_version }} source at commit [`{{ quickjs_commit }}`]({{ quickjs_commit_url }})"
+      ]
+    }
+  }
+}

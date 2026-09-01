@@ -19,6 +19,12 @@ REQUIRED_UPSTREAM = {
     "license": "MIT",
 }
 
+REQUIRED_ANDROID_BUILD = {
+    "minimumSupportedApi": 24,
+    "ndkVersion": "28.2.13676358",
+    "minimumElfPageAlignment": 16384,
+}
+
 
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
@@ -35,6 +41,8 @@ def verify(lock_path: Path, repository_root: Path) -> list[str]:
         errors.append("source lock schemaVersion must be 1")
     if data.get("upstream") != REQUIRED_UPSTREAM:
         errors.append("source lock upstream metadata does not match the pinned release")
+    if data.get("androidBuild") != REQUIRED_ANDROID_BUILD:
+        errors.append("source lock Android build metadata does not match the native build contract")
 
     vendor_root_value = data.get("vendorRoot")
     if not isinstance(vendor_root_value, str) or not vendor_root_value:

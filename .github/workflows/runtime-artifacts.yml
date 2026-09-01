@@ -1,0 +1,48 @@
+name: QuickJS source integrity
+
+on:
+  push:
+    paths:
+      - ".gitattributes"
+      - "app/src/main/cpp/vendor/**"
+      - "tools/quickjs/**"
+      - ".github/workflows/runtime-artifacts.yml"
+  pull_request:
+    paths:
+      - ".gitattributes"
+      - "app/src/main/cpp/vendor/**"
+      - "tools/quickjs/**"
+      - ".github/workflows/runtime-artifacts.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-runtime:
+    name: Reproduce pinned official QuickJS sources
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Verify checked-in source inventory
+        run: |
+          python3 -B tools/quickjs/verify_source.py
+          python3 -B -m unittest discover -s tools/quickjs/tests -p "test_*.py"
+
+      - name: Download pinned official archive
+        run: |
+          curl --fail --location --proto '=https' \
+            https://bellard.org/quickjs/quickjs-2026-06-04.tar.xz \
+            --output quickjs-2026-06-04.tar.xz
+
+      - name: Reproduce selected vendored bytes
+        run: python3 -B tools/quickjs/verify_upstream_archive.py quickjs-2026-06-04.tar.xz

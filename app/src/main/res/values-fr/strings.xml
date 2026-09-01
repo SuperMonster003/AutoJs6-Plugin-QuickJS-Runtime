@@ -1,0 +1,3 @@
+<resources>
+    <string name="plugin_description">Exécute JavaScript avec un moteur QuickJS indépendant dans un processus Android isolé</string>
+</resources>
