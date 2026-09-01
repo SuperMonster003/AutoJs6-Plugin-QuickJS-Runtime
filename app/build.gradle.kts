@@ -71,6 +71,7 @@ android {
 
 dependencies {
     implementation(files("$rootDir/libs/common-plugin-api.aar"))
+    implementation(projects.pluginApi.quickjsRuntimeApi)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.test.ext.junit)

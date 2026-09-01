@@ -21,3 +21,4 @@ plugins {
 
 includeBuild("build-logic")
 include(":app")
+include(":plugin-api:quickjs-runtime-api")
