@@ -172,7 +172,7 @@ tasks.register<Exec>("verifyDebugApkVariants") {
     )
 }
 
-tasks.register<Copy>("appendDigestToReleasedFiles") {
+tasks.register<Sync>("appendDigestToReleasedFiles") {
     description = "Collects signed ABI and universal APKs with CRC32 in each name."
     val ext = utils.FILE_EXTENSION_APK
     val src = layout.buildDirectory.dir("outputs/apk/release")

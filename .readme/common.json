@@ -2,7 +2,7 @@
   "repo_url": "https://github.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime",
   "repo_slug": "SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime",
   "icon_alt": "QuickJS Runtime",
-  "icon_url": "https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/drawable-nodpi/ic_launcher.png",
+  "icon_url": "https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap/ic_launcher.png",
   "autojs6_url": "https://github.com/SuperMonster003/AutoJs6",
   "quickjs_official_url": "https://bellard.org/quickjs/",
   "quickjs_documentation_url": "https://bellard.org/quickjs/quickjs.html",

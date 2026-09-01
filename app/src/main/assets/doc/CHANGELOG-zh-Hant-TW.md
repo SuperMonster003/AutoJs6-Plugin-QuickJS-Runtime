@@ -9,7 +9,7 @@
 ###### 2026/09/02
 
 * `提示` 首個版本每次只接收一個不可變 JavaScript 原始碼快照, 並刻意不提供 AutoJs6 全域物件, Java bridge, 檔案系統, 網路, timer, 原生 addon 或多檔 import
-* `功能` 透過 `"quickjs";` 指令選擇內嵌的官方 QuickJS 2026-06-04 引擎執行 JavaScript, 不會把執行轉交 Rhino, Node.js 或 Bun
+* `功能` 透過 `"quickjs";` 指令或 `*.quickjs.js` 和 `*.quickjs.mjs` 標記選擇內嵌的官方 QuickJS 2026-06-04 引擎執行 JavaScript, 不會把執行轉交 Rhino, Node.js 或 Bun
 * `功能` 透過版本化 AIDL 契約發現受保護 runtime service, 使用 `ParcelFileDescriptor` 傳輸原始碼, 並透過 oneway callback 串流回傳有界 stdout 和 stderr 事件
 * `功能` 支援 script 和單檔 ES module, 包括 BigInt, Unicode, Promise job, module top-level await, error, timeout, output limit, memory 和 stack limit, cancellation 及 prewarm
 * `功能` 發行採用相同原生引擎契約的 `arm64-v8a`, `armeabi-v7a`, `x86_64`, `x86` 和 `universal` APK

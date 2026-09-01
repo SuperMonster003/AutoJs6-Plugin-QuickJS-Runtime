@@ -11,7 +11,7 @@
     "Use AutoJs6 build {{ required_host_version_code }} ({{ required_host_version_name }}) or later on Android {{ min_android_version }} (API {{ android_min_sdk }}) or later.",
     "Install the release APK matching the device ABI, or use the larger `universal` APK when the ABI is unknown.",
     "Open the AutoJs6 plugin center and enable QuickJS Runtime. If Android left the newly installed package stopped, use the host `Activate` action.",
-    "Put the standalone directive `\"quickjs\";` at the beginning of a `.js` or `.mjs` file, then run it normally from AutoJs6."
+    "Select QuickJS with the standalone `\"quickjs\";` directive at the beginning of a `.js` or `.mjs` file, or name the file `*.quickjs.js` for script mode or `*.quickjs.mjs` for ES module mode; then run it normally from AutoJs6."
   ],
   "p_usage_note": "Version 1.0 accepts one immutable source snapshot per request. It does not transfer a project tree or resolve relative file imports, and it deliberately exposes no AutoJs6 globals, Java bridge, filesystem, network, `std`, or `os` module.",
   "h3_quick_start": "Quick Start",

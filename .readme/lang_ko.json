@@ -11,7 +11,7 @@
     "Android {{ min_android_version }} (API {{ android_min_sdk }}) 이상에서 AutoJs6 build {{ required_host_version_code }} ({{ required_host_version_name }}) 이상을 사용합니다.",
     "기기 ABI에 맞는 release APK를 설치합니다. ABI를 모르면 더 큰 `universal` APK를 사용합니다.",
     "AutoJs6 플러그인 센터를 열고 QuickJS Runtime을 활성화합니다. Android가 새 패키지를 중지 상태로 두었다면 host의 `활성화` 작업을 사용합니다.",
-    "`.js` 또는 `.mjs` 파일 시작 부분에 독립 directive `\"quickjs\";`를 놓고 AutoJs6에서 평소처럼 실행합니다."
+    "`.js` 또는 `.mjs` 파일 시작 부분에 독립 directive `\"quickjs\";`를 놓거나 script mode에는 `*.quickjs.js`, ES module mode에는 `*.quickjs.mjs` 이름을 사용한 뒤 AutoJs6에서 평소처럼 실행합니다."
   ],
   "p_usage_note": "버전 1.0은 요청마다 변경 불가능한 소스 snapshot 하나를 받습니다. Project tree를 전송하거나 상대 file import를 해석하지 않으며 AutoJs6 globals, Java bridge, filesystem, network, `std`, `os` module을 의도적으로 노출하지 않습니다.",
   "h3_quick_start": "빠른 시작",

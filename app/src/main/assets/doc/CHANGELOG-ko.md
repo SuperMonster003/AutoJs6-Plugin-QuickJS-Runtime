@@ -9,7 +9,7 @@
 ###### 2026/09/02
 
 * `안내` 첫 release는 immutable JavaScript source snapshot 하나를 받으며 AutoJs6 globals, Java bridge, filesystem, network, timer, native addon, multi-file import를 제공하지 않습니다
-* `기능` `"quickjs";` directive로 선택한 내장 공식 QuickJS 2026-06-04 engine에서 JavaScript를 실행하며 Rhino, Node.js, Bun으로 전달하지 않습니다
+* `기능` `"quickjs";` directive 또는 `*.quickjs.js`와 `*.quickjs.mjs` marker로 선택한 내장 공식 QuickJS 2026-06-04 engine에서 JavaScript를 실행하며 Rhino, Node.js, Bun으로 전달하지 않습니다
 * `기능` Versioned AIDL로 protected runtime service를 검색하고 `ParcelFileDescriptor`로 source를 전송하며 제한된 stdout과 stderr 이벤트를 oneway callback으로 stream합니다
 * `기능` Script와 단일 파일 ES module에서 BigInt, Unicode, Promise job, top-level await, error, timeout, output, memory, stack limit, cancellation, prewarm을 지원합니다
 * `기능` 동일한 native engine contract를 사용하는 `arm64-v8a`, `armeabi-v7a`, `x86_64`, `x86`, `universal` APK를 제공합니다

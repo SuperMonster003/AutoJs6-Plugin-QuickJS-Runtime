@@ -9,7 +9,7 @@
 ###### 2026/09/02
 
 * `ヒント` 初回 release は 1 個の immutable JavaScript source snapshot を受け取り, AutoJs6 globals, Java bridge, filesystem, network, timer, native addon, multi-file import は提供しません
-* `機能` `"quickjs";` directive で選択した埋め込み公式 QuickJS 2026-06-04 engine で JavaScript を実行し, Rhino, Node.js, Bun には転送しません
+* `機能` `"quickjs";` directive または `*.quickjs.js` と `*.quickjs.mjs` marker で選択した埋め込み公式 QuickJS 2026-06-04 engine で JavaScript を実行し, Rhino, Node.js, Bun には転送しません
 * `機能` Versioned AIDL で protected runtime service を検出し, `ParcelFileDescriptor` で source を転送し, bounded stdout と stderr event を oneway callback で stream します
 * `機能` Script と single-file ES module で BigInt, Unicode, Promise job, top-level await, error, timeout, output, memory, stack limit, cancellation, prewarm をサポートします
 * `機能` 同じ native engine contract を持つ `arm64-v8a`, `armeabi-v7a`, `x86_64`, `x86`, `universal` APK を提供します

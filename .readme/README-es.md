@@ -2,7 +2,7 @@
 
 <div align="center">
   <p>
-    <img src="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/drawable-nodpi/ic_launcher.png" alt="QuickJS Runtime" border="0" width="128" />
+    <img src="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap/ic_launcher.png" alt="QuickJS Runtime" border="0" width="128" />
   </p>
 
   <p>Ejecuta JavaScript con un motor QuickJS independiente en un proceso Android aislado</p>
@@ -50,7 +50,7 @@ QuickJS Runtime es un complemento Android autónomo que permite a AutoJs6 selecc
 1. Usa AutoJs6 build 5279 (6.8.0) o posterior en Android 7.0 (API 24) o posterior.
 2. Instala el APK de la versión que coincida con el ABI del dispositivo, o usa el APK `universal` más grande si no conoces el ABI.
 3. Abre el centro de complementos de AutoJs6 y habilita QuickJS Runtime. Si Android dejó detenido el paquete recién instalado, usa la acción `Activar` del host.
-4. Coloca la directiva independiente `"quickjs";` al principio de un archivo `.js` o `.mjs` y ejecútalo normalmente desde AutoJs6.
+4. Selecciona QuickJS con la directiva independiente `"quickjs";` al principio de un archivo `.js` o `.mjs`, o nómbralo `*.quickjs.js` para modo script o `*.quickjs.mjs` para modo ES module; después ejecútalo normalmente desde AutoJs6.
 
 > La versión 1.0 acepta una sola instantánea inmutable de código por solicitud. No transfiere un árbol de proyecto ni resuelve imports relativos, y no expone globales de AutoJs6, puente Java, sistema de archivos, red ni módulos `std` u `os`.
 
@@ -136,7 +136,7 @@ Estado de 16 KB: el linker nativo usa un tamaño máximo de página de 16 KB y e
 _2026/09/02_
 
 - `Aviso` La primera versión acepta una instantánea inmutable de JavaScript y no ofrece globales AutoJs6, puente Java, sistema de archivos, red, timers, addons nativos ni imports de varios archivos
-- `Función` Ejecuta JavaScript con el motor oficial integrado QuickJS 2026-06-04 elegido por la directiva `"quickjs";`, sin reenviar la ejecución a Rhino, Node.js o Bun
+- `Función` Ejecuta JavaScript con el motor oficial integrado QuickJS 2026-06-04 elegido por la directiva `"quickjs";` o los marcadores `*.quickjs.js` y `*.quickjs.mjs`, sin reenviar la ejecución a Rhino, Node.js o Bun
 - `Función` Descubre un runtime service protegido mediante AIDL versionado, transfiere el código con `ParcelFileDescriptor` y transmite eventos stdout y stderr limitados por callbacks oneway
 - `Función` Admite scripts y módulos ES de un archivo con BigInt, Unicode, jobs Promise, top-level await, errores, timeout, límites de salida, memoria y stack, cancelación y precalentamiento
 - `Función` Publica APK `arm64-v8a`, `armeabi-v7a`, `x86_64`, `x86` y `universal` con el mismo contrato de motor nativo

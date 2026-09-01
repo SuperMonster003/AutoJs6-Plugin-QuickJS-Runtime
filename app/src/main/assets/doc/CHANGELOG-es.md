@@ -9,7 +9,7 @@
 ###### 2026/09/02
 
 * `Aviso` La primera versión acepta una instantánea inmutable de JavaScript y no ofrece globales AutoJs6, puente Java, sistema de archivos, red, timers, addons nativos ni imports de varios archivos
-* `Función` Ejecuta JavaScript con el motor oficial integrado QuickJS 2026-06-04 elegido por la directiva `"quickjs";`, sin reenviar la ejecución a Rhino, Node.js o Bun
+* `Función` Ejecuta JavaScript con el motor oficial integrado QuickJS 2026-06-04 elegido por la directiva `"quickjs";` o los marcadores `*.quickjs.js` y `*.quickjs.mjs`, sin reenviar la ejecución a Rhino, Node.js o Bun
 * `Función` Descubre un runtime service protegido mediante AIDL versionado, transfiere el código con `ParcelFileDescriptor` y transmite eventos stdout y stderr limitados por callbacks oneway
 * `Función` Admite scripts y módulos ES de un archivo con BigInt, Unicode, jobs Promise, top-level await, errores, timeout, límites de salida, memoria y stack, cancelación y precalentamiento
 * `Función` Publica APK `arm64-v8a`, `armeabi-v7a`, `x86_64`, `x86` y `universal` con el mismo contrato de motor nativo

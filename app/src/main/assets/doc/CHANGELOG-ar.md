@@ -9,7 +9,7 @@
 ###### 2026/09/02
 
 * `تنبيه` يقبل release الأول immutable JavaScript source snapshot واحدة ولا يقدم AutoJs6 globals أو Java bridge أو filesystem أو network أو timers أو native addons أو multi-file imports
-* `ميزة` يشغل JavaScript بمحرك QuickJS 2026-06-04 الرسمي المضمن والمحدد بالتوجيه `"quickjs";`, من دون تحويل التنفيذ إلى Rhino أو Node.js أو Bun
+* `ميزة` يشغل JavaScript بمحرك QuickJS 2026-06-04 الرسمي المضمن والمحدد بالتوجيه `"quickjs";` أو العلامتين `*.quickjs.js` و `*.quickjs.mjs`, من دون تحويل التنفيذ إلى Rhino أو Node.js أو Bun
 * `ميزة` يكتشف runtime service محمية بعقد AIDL ذي إصدار, وينقل source عبر `ParcelFileDescriptor`, ويبث أحداث stdout و stderr المحدودة عبر oneway callbacks
 * `ميزة` يدعم scripts و ES modules بملف واحد مع BigInt و Unicode و Promise jobs و top-level await و errors و timeout وحدود output و memory و stack و cancellation و prewarm
 * `ميزة` يوفر حزم APK من أنواع `arm64-v8a` و `armeabi-v7a` و `x86_64` و `x86` و `universal` بالعقد نفسه للمحرك الأصلي

@@ -2,7 +2,7 @@
 
 <div align="center">
   <p>
-    <img src="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/drawable-nodpi/ic_launcher.png" alt="QuickJS Runtime" border="0" width="128" />
+    <img src="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap/ic_launcher.png" alt="QuickJS Runtime" border="0" width="128" />
   </p>
 
   <p>Запускает JavaScript в независимом движке QuickJS в изолированном процессе Android</p>
@@ -50,7 +50,7 @@ QuickJS Runtime является отдельным плагином Android, п
 1. Используйте AutoJs6 build 5279 (6.8.0) или новее на Android 7.0 (API 24) или новее.
 2. Установите release APK для ABI устройства. Если ABI неизвестен, используйте более крупный APK `universal`.
 3. Откройте центр плагинов AutoJs6 и включите QuickJS Runtime. Если Android оставил новый пакет остановленным, используйте действие host `Активировать`.
-4. Поместите отдельную директиву `"quickjs";` в начало файла `.js` или `.mjs`, затем запустите его обычным способом из AutoJs6.
+4. Выберите QuickJS отдельной директивой `"quickjs";` в начале файла `.js` или `.mjs` либо именем `*.quickjs.js` для режима script или `*.quickjs.mjs` для режима ES module; затем запустите файл обычным способом из AutoJs6.
 
 > Версия 1.0 принимает один неизменяемый снимок исходного кода на запрос. Она не передает дерево проекта и не разрешает относительные импорты, а также намеренно не предоставляет globals AutoJs6, Java bridge, filesystem, network и модули `std` или `os`.
 
@@ -136,7 +136,7 @@ default stack limit: 1 MiB
 _2026/09/02_
 
 - `Подсказка` Первый release принимает один неизменяемый JavaScript source snapshot и не предоставляет AutoJs6 globals, Java bridge, filesystem, network, timers, native addons и многофайловые imports
-- `Функция` Запускает JavaScript встроенным официальным движком QuickJS 2026-06-04, выбранным директивой `"quickjs";`, без передачи выполнения Rhino, Node.js или Bun
+- `Функция` Запускает JavaScript встроенным официальным движком QuickJS 2026-06-04, выбранным директивой `"quickjs";` или маркерами `*.quickjs.js` и `*.quickjs.mjs`, без передачи выполнения Rhino, Node.js или Bun
 - `Функция` Обнаруживает защищенный runtime service через versioned AIDL, передает source через `ParcelFileDescriptor` и транслирует ограниченные события stdout и stderr через oneway callbacks
 - `Функция` Поддерживает scripts и однофайловые ES modules с BigInt, Unicode, Promise jobs, top-level await, errors, timeout, output, memory и stack limits, cancellation и prewarm
 - `Функция` Поставляет APK `arm64-v8a`, `armeabi-v7a`, `x86_64`, `x86` и `universal` с единым native engine contract

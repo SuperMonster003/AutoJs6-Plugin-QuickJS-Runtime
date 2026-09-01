@@ -11,7 +11,7 @@
     "在 Android {{ min_android_version }} (API {{ android_min_sdk }}) 或更高版本上使用 AutoJs6 build {{ required_host_version_code }} ({{ required_host_version_name }}) 或更高版本.",
     "安装与设备 ABI 对应的发布 APK. 如果不确定 ABI, 可安装体积更大的 `universal` APK.",
     "打开 AutoJs6 插件中心并启用 QuickJS Runtime. 如果 Android 仍将新安装的包保持在停止状态, 请使用宿主显示的 `激活` 操作.",
-    "在 `.js` 或 `.mjs` 文件开头放置独立指令 `\"quickjs\";`, 然后从 AutoJs6 正常运行该文件."
+    "可在 `.js` 或 `.mjs` 文件开头放置独立指令 `\"quickjs\";`, 也可把文件命名为脚本模式的 `*.quickjs.js` 或 ES module 模式的 `*.quickjs.mjs`; 然后从 AutoJs6 正常运行."
   ],
   "p_usage_note": "1.0 版本每次请求只接收一个不可变源码快照. 它不会传输项目目录或解析相对文件导入, 并且有意不暴露 AutoJs6 全局对象, Java 桥, 文件系统, 网络, `std` 或 `os` 模块.",
   "h3_quick_start": "快速开始",
