@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Device tests may run without AutoJs6 installed. This test-only declaration lets the
+         instrumentation APK grant the signature permission while preserving the production
+         Binder boundary. When AutoJs6 is installed, pass a unique placeholder name so Android
+         does not see a second owner for the real permission. -->
+    <permission
+        android:name="${androidTestPermissionName}"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="org.autojs.permission.PLUGIN" />
+
+</manifest>

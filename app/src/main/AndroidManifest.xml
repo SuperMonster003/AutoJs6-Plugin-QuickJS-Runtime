@@ -27,6 +27,27 @@
             </intent-filter>
         </activity>
 
+        <service
+            android:name=".QuickJsPluginInfoService"
+            android:exported="true"
+            android:permission="org.autojs.permission.PLUGIN">
+            <intent-filter>
+                <action android:name="org.autojs.plugin.INFO" />
+                <category android:name="quickjs" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".QuickJsRuntimeService"
+            android:exported="true"
+            android:permission="org.autojs.permission.PLUGIN"
+            android:process=":quickjs_runtime">
+            <intent-filter>
+                <action android:name="org.autojs.plugin.quickjs.RUNTIME" />
+                <category android:name="quickjs" />
+            </intent-filter>
+        </service>
+
     </application>
 
 </manifest>

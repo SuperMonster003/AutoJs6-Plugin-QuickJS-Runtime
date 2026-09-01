@@ -15,7 +15,7 @@ android {
 
     lint {
         targetSdk = versions.sdkVersionTarget
-        abortOnError = false
+        abortOnError = true
     }
 
     buildFeatures {
@@ -25,6 +25,6 @@ android {
 }
 
 dependencies {
-    api(files("$rootDir/libs/common-plugin-api.aar"))
+    compileOnly(files("$rootDir/libs/common-plugin-api.aar"))
     testImplementation(libs.junit)
 }
