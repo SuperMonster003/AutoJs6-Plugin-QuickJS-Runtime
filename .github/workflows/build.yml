@@ -43,7 +43,8 @@ jobs:
           python3 -B tools/quickjs/verify_source.py
           python3 -B -m unittest discover -s tools/quickjs/tests -p "test_*.py"
           python3 -B .python/generate_markdown.py --check
-          expected_build="$(git rev-list --count HEAD)"
+          version_ref="${{ github.event.pull_request.head.sha || github.sha }}"
+          expected_build="$(git rev-list --count "$version_ref")"
           actual_build="$(sed -n 's/^VERSION_BUILD=//p' version.properties)"
           test "$actual_build" = "$expected_build"
 
@@ -142,7 +143,7 @@ jobs:
           arch: x86_64
           profile: pixel_7
           script: |
-            page_size="$(adb shell getconf PAGE_SIZE | tr -d '\r')"
+            page_size="$(adb shell 'getconf PAGE_SIZE 2>/dev/null || getconf PAGESIZE 2>/dev/null' | tr -d '\r')"
             test "$page_size" = "16384"
             adb install -r -t ci-apks/debug/app-x86_64-debug.apk
             adb install -r -t ci-apks/androidTest/debug/app-debug-androidTest.apk

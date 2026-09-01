@@ -2,7 +2,7 @@
 
 <div align="center">
   <p>
-    <img src="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/drawable-nodpi/ic_launcher.png" alt="QuickJS Runtime" border="0" width="128" />
+    <img src="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap/ic_launcher.png" alt="QuickJS Runtime" border="0" width="128" />
   </p>
 
   <p>独立した Android プロセスで独立 QuickJS エンジンを使用して JavaScript を実行</p>
@@ -50,7 +50,7 @@ QuickJS Runtime は AutoJs6 が [QuickJS](https://bellard.org/quickjs/) を独�
 1. Android 7.0 (API 24) 以降で AutoJs6 build 5279 (6.8.0) 以降を使用します.
 2. 端末 ABI に対応する release APK をインストールします. ABI が不明な場合は容量の大きい `universal` APK を使用します.
 3. AutoJs6 プラグインセンターを開いて QuickJS Runtime を有効にします. Android が新規 package を停止状態にした場合は host の `有効化` 操作を使用します.
-4. `.js` または `.mjs` ファイルの先頭に単独 directive `"quickjs";` を置き, AutoJs6 から通常どおり実行します.
+4. `.js` または `.mjs` ファイルの先頭に単独 directive `"quickjs";` を置くか, script mode は `*.quickjs.js`, ES module mode は `*.quickjs.mjs` と命名し, AutoJs6 から通常どおり実行します.
 
 > バージョン 1.0 はリクエストごとに 1 個の immutable source snapshot を受け取ります. project tree の転送や relative file import の解決は行わず, AutoJs6 globals, Java bridge, filesystem, network, `std`, `os` module も公開しません.
 
@@ -136,7 +136,7 @@ default stack limit: 1 MiB
 _2026/09/02_
 
 - `ヒント` 初回 release は 1 個の immutable JavaScript source snapshot を受け取り, AutoJs6 globals, Java bridge, filesystem, network, timer, native addon, multi-file import は提供しません
-- `機能` `"quickjs";` directive で選択した埋め込み公式 QuickJS 2026-06-04 engine で JavaScript を実行し, Rhino, Node.js, Bun には転送しません
+- `機能` `"quickjs";` directive または `*.quickjs.js` と `*.quickjs.mjs` marker で選択した埋め込み公式 QuickJS 2026-06-04 engine で JavaScript を実行し, Rhino, Node.js, Bun には転送しません
 - `機能` Versioned AIDL で protected runtime service を検出し, `ParcelFileDescriptor` で source を転送し, bounded stdout と stderr event を oneway callback で stream します
 - `機能` Script と single-file ES module で BigInt, Unicode, Promise job, top-level await, error, timeout, output, memory, stack limit, cancellation, prewarm をサポートします
 - `機能` 同じ native engine contract を持つ `arm64-v8a`, `armeabi-v7a`, `x86_64`, `x86`, `universal` APK を提供します

@@ -11,7 +11,7 @@
         "初回 release は 1 個の immutable JavaScript source snapshot を受け取り, AutoJs6 globals, Java bridge, filesystem, network, timer, native addon, multi-file import は提供しません"
       ],
       "feature": [
-        "`\"quickjs\";` directive で選択した埋め込み公式 QuickJS {{ quickjs_version }} engine で JavaScript を実行し, Rhino, Node.js, Bun には転送しません",
+        "`\"quickjs\";` directive または `*.quickjs.js` と `*.quickjs.mjs` marker で選択した埋め込み公式 QuickJS {{ quickjs_version }} engine で JavaScript を実行し, Rhino, Node.js, Bun には転送しません",
         "Versioned AIDL で protected runtime service を検出し, `ParcelFileDescriptor` で source を転送し, bounded stdout と stderr event を oneway callback で stream します",
         "Script と single-file ES module で BigInt, Unicode, Promise job, top-level await, error, timeout, output, memory, stack limit, cancellation, prewarm をサポートします",
         "同じ native engine contract を持つ `arm64-v8a`, `armeabi-v7a`, `x86_64`, `x86`, `universal` APK を提供します",

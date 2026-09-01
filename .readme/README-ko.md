@@ -2,7 +2,7 @@
 
 <div align="center">
   <p>
-    <img src="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/drawable-nodpi/ic_launcher.png" alt="QuickJS Runtime" border="0" width="128" />
+    <img src="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap/ic_launcher.png" alt="QuickJS Runtime" border="0" width="128" />
   </p>
 
   <p>분리된 Android 프로세스에서 독립 QuickJS 엔진으로 JavaScript 실행</p>
@@ -50,7 +50,7 @@ QuickJS Runtime은 AutoJs6에서 [QuickJS](https://bellard.org/quickjs/)를 독�
 1. Android 7.0 (API 24) 이상에서 AutoJs6 build 5279 (6.8.0) 이상을 사용합니다.
 2. 기기 ABI에 맞는 release APK를 설치합니다. ABI를 모르면 더 큰 `universal` APK를 사용합니다.
 3. AutoJs6 플러그인 센터를 열고 QuickJS Runtime을 활성화합니다. Android가 새 패키지를 중지 상태로 두었다면 host의 `활성화` 작업을 사용합니다.
-4. `.js` 또는 `.mjs` 파일 시작 부분에 독립 directive `"quickjs";`를 놓고 AutoJs6에서 평소처럼 실행합니다.
+4. `.js` 또는 `.mjs` 파일 시작 부분에 독립 directive `"quickjs";`를 놓거나 script mode에는 `*.quickjs.js`, ES module mode에는 `*.quickjs.mjs` 이름을 사용한 뒤 AutoJs6에서 평소처럼 실행합니다.
 
 > 버전 1.0은 요청마다 변경 불가능한 소스 snapshot 하나를 받습니다. Project tree를 전송하거나 상대 file import를 해석하지 않으며 AutoJs6 globals, Java bridge, filesystem, network, `std`, `os` module을 의도적으로 노출하지 않습니다.
 
@@ -136,7 +136,7 @@ default stack limit: 1 MiB
 _2026/09/02_
 
 - `안내` 첫 release는 immutable JavaScript source snapshot 하나를 받으며 AutoJs6 globals, Java bridge, filesystem, network, timer, native addon, multi-file import를 제공하지 않습니다
-- `기능` `"quickjs";` directive로 선택한 내장 공식 QuickJS 2026-06-04 engine에서 JavaScript를 실행하며 Rhino, Node.js, Bun으로 전달하지 않습니다
+- `기능` `"quickjs";` directive 또는 `*.quickjs.js`와 `*.quickjs.mjs` marker로 선택한 내장 공식 QuickJS 2026-06-04 engine에서 JavaScript를 실행하며 Rhino, Node.js, Bun으로 전달하지 않습니다
 - `기능` Versioned AIDL로 protected runtime service를 검색하고 `ParcelFileDescriptor`로 source를 전송하며 제한된 stdout과 stderr 이벤트를 oneway callback으로 stream합니다
 - `기능` Script와 단일 파일 ES module에서 BigInt, Unicode, Promise job, top-level await, error, timeout, output, memory, stack limit, cancellation, prewarm을 지원합니다
 - `기능` 동일한 native engine contract를 사용하는 `arm64-v8a`, `armeabi-v7a`, `x86_64`, `x86`, `universal` APK를 제공합니다

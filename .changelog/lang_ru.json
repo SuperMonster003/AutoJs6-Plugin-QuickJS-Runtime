@@ -11,7 +11,7 @@
         "Первый release принимает один неизменяемый JavaScript source snapshot и не предоставляет AutoJs6 globals, Java bridge, filesystem, network, timers, native addons и многофайловые imports"
       ],
       "feature": [
-        "Запускает JavaScript встроенным официальным движком QuickJS {{ quickjs_version }}, выбранным директивой `\"quickjs\";`, без передачи выполнения Rhino, Node.js или Bun",
+        "Запускает JavaScript встроенным официальным движком QuickJS {{ quickjs_version }}, выбранным директивой `\"quickjs\";` или маркерами `*.quickjs.js` и `*.quickjs.mjs`, без передачи выполнения Rhino, Node.js или Bun",
         "Обнаруживает защищенный runtime service через versioned AIDL, передает source через `ParcelFileDescriptor` и транслирует ограниченные события stdout и stderr через oneway callbacks",
         "Поддерживает scripts и однофайловые ES modules с BigInt, Unicode, Promise jobs, top-level await, errors, timeout, output, memory и stack limits, cancellation и prewarm",
         "Поставляет APK `arm64-v8a`, `armeabi-v7a`, `x86_64`, `x86` и `universal` с единым native engine contract",

@@ -11,7 +11,7 @@
     "استخدم AutoJs6 build {{ required_host_version_code }} ({{ required_host_version_name }}) أو أحدث على Android {{ min_android_version }} (API {{ android_min_sdk }}) أو أحدث.",
     "ثبت APK الإصدار المطابق لـ ABI الجهاز, أو استخدم APK الأكبر `universal` إذا كان ABI غير معروف.",
     "افتح مركز إضافات AutoJs6 وفعل QuickJS Runtime. إذا ترك Android الحزمة الجديدة متوقفة فاستخدم إجراء host باسم `تفعيل`.",
-    "ضع التوجيه المستقل `\"quickjs\";` في بداية ملف `.js` أو `.mjs`, ثم شغله بصورة عادية من AutoJs6."
+    "حدد QuickJS بوضع التوجيه المستقل `\"quickjs\";` في بداية ملف `.js` أو `.mjs`, أو سم الملف `*.quickjs.js` لوضع script أو `*.quickjs.mjs` لوضع ES module, ثم شغله بصورة عادية من AutoJs6."
   ],
   "p_usage_note": "يقبل الإصدار 1.0 لقطة مصدر ثابتة واحدة لكل طلب. لا ينقل شجرة مشروع ولا يحل imports نسبية, ولا يعرض عمدا globals الخاصة بـ AutoJs6 أو Java bridge أو filesystem أو network أو وحدتي `std` و `os`.",
   "h3_quick_start": "بدء سريع",

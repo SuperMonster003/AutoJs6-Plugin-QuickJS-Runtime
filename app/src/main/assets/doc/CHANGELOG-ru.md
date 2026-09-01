@@ -9,7 +9,7 @@
 ###### 2026/09/02
 
 * `Подсказка` Первый release принимает один неизменяемый JavaScript source snapshot и не предоставляет AutoJs6 globals, Java bridge, filesystem, network, timers, native addons и многофайловые imports
-* `Функция` Запускает JavaScript встроенным официальным движком QuickJS 2026-06-04, выбранным директивой `"quickjs";`, без передачи выполнения Rhino, Node.js или Bun
+* `Функция` Запускает JavaScript встроенным официальным движком QuickJS 2026-06-04, выбранным директивой `"quickjs";` или маркерами `*.quickjs.js` и `*.quickjs.mjs`, без передачи выполнения Rhino, Node.js или Bun
 * `Функция` Обнаруживает защищенный runtime service через versioned AIDL, передает source через `ParcelFileDescriptor` и транслирует ограниченные события stdout и stderr через oneway callbacks
 * `Функция` Поддерживает scripts и однофайловые ES modules с BigInt, Unicode, Promise jobs, top-level await, errors, timeout, output, memory и stack limits, cancellation и prewarm
 * `Функция` Поставляет APK `arm64-v8a`, `armeabi-v7a`, `x86_64`, `x86` и `universal` с единым native engine contract

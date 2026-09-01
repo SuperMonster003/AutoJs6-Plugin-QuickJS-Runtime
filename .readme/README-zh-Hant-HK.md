@@ -2,7 +2,7 @@
 
 <div align="center">
   <p>
-    <img src="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/drawable-nodpi/ic_launcher.png" alt="QuickJS Runtime" border="0" width="128" />
+    <img src="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap/ic_launcher.png" alt="QuickJS Runtime" border="0" width="128" />
   </p>
 
   <p>在獨立 Android 程序中使用獨立 QuickJS 引擎執行 JavaScript</p>
@@ -50,7 +50,7 @@ QuickJS Runtime 是一個獨立 Android 插件, 讓 AutoJs6 可選擇 [QuickJS](
 1. 在 Android 7.0 (API 24) 或更高版本上使用 AutoJs6 build 5279 (6.8.0) 或更高版本.
 2. 安裝與裝置 ABI 對應的發佈 APK. 若不確定 ABI, 可安裝較大的 `universal` APK.
 3. 開啟 AutoJs6 插件中心並啟用 QuickJS Runtime. 若 Android 仍把新安裝套件保持在停止狀態, 請使用宿主顯示的 `啟用` 操作.
-4. 在 `.js` 或 `.mjs` 檔案開頭放置獨立指令 `"quickjs";`, 然後從 AutoJs6 正常執行.
+4. 可在 `.js` 或 `.mjs` 檔案開頭放置獨立指令 `"quickjs";`, 也可把檔案命名為 script 模式的 `*.quickjs.js` 或 ES module 模式的 `*.quickjs.mjs`; 然後從 AutoJs6 正常執行.
 
 > 1.0 版本每次請求只接收一個不可變源碼快照. 它不會傳輸專案目錄或解析相對檔案 import, 並刻意不公開 AutoJs6 全域物件, Java bridge, 檔案系統, 網絡, `std` 或 `os` module.
 
@@ -136,7 +136,7 @@ default stack limit: 1 MiB
 _2026/09/02_
 
 - `提示` 首個版本每次只接收一個不可變 JavaScript 源碼快照, 並刻意不提供 AutoJs6 全域物件, Java bridge, 檔案系統, 網絡, timer, 原生 addon 或多檔 import
-- `功能` 透過 `"quickjs";` 指令選擇內嵌的官方 QuickJS 2026-06-04 引擎執行 JavaScript, 不會把執行轉交 Rhino, Node.js 或 Bun
+- `功能` 透過 `"quickjs";` 指令或 `*.quickjs.js` 和 `*.quickjs.mjs` 標記選擇內嵌的官方 QuickJS 2026-06-04 引擎執行 JavaScript, 不會把執行轉交 Rhino, Node.js 或 Bun
 - `功能` 透過版本化 AIDL 契約發現受保護 runtime service, 使用 `ParcelFileDescriptor` 傳輸源碼, 並透過 oneway callback 串流返回有界 stdout 和 stderr 事件
 - `功能` 支援 script 和單檔 ES module, 包括 BigInt, Unicode, Promise job, module top-level await, error, timeout, output limit, memory 和 stack limit, cancellation 及 prewarm
 - `功能` 發佈採用相同原生引擎契約的 `arm64-v8a`, `armeabi-v7a`, `x86_64`, `x86` 和 `universal` APK

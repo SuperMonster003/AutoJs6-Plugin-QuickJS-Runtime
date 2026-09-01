@@ -9,7 +9,7 @@
 ###### 2026/09/02
 
 * `Hint` The first release accepts one immutable JavaScript source snapshot and deliberately provides no AutoJs6 globals, Java bridge, filesystem, network, timers, native addons, or multi-file imports
-* `Feature` Run JavaScript through the embedded official QuickJS 2026-06-04 engine selected by the `"quickjs";` directive, without forwarding execution to Rhino, Node.js, or Bun
+* `Feature` Run JavaScript through the embedded official QuickJS 2026-06-04 engine selected by the `"quickjs";` directive or `*.quickjs.js` and `*.quickjs.mjs` markers, without forwarding execution to Rhino, Node.js, or Bun
 * `Feature` Discover a protected runtime service through a versioned AIDL contract, transfer source with `ParcelFileDescriptor`, and stream bounded stdout and stderr events through oneway callbacks
 * `Feature` Support scripts and single-file ES modules with BigInt, Unicode, Promise jobs, module top-level await, errors, timeout, output limits, memory and stack limits, cancellation, and prewarming
 * `Feature` Ship `arm64-v8a`, `armeabi-v7a`, `x86_64`, `x86`, and `universal` APKs with the same native engine contract

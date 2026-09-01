@@ -2,7 +2,7 @@
 
 <div align="center">
   <p>
-    <img src="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/drawable-nodpi/ic_launcher.png" alt="QuickJS Runtime" border="0" width="128" />
+    <img src="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap/ic_launcher.png" alt="QuickJS Runtime" border="0" width="128" />
   </p>
 
   <p>يشغل JavaScript بمحرك QuickJS مستقل داخل عملية Android معزولة</p>
@@ -50,7 +50,7 @@ QuickJS Runtime إضافة Android مستقلة تتيح لـ AutoJs6 اختيا
 1. استخدم AutoJs6 build 5279 (6.8.0) أو أحدث على Android 7.0 (API 24) أو أحدث.
 2. ثبت APK الإصدار المطابق لـ ABI الجهاز, أو استخدم APK الأكبر `universal` إذا كان ABI غير معروف.
 3. افتح مركز إضافات AutoJs6 وفعل QuickJS Runtime. إذا ترك Android الحزمة الجديدة متوقفة فاستخدم إجراء host باسم `تفعيل`.
-4. ضع التوجيه المستقل `"quickjs";` في بداية ملف `.js` أو `.mjs`, ثم شغله بصورة عادية من AutoJs6.
+4. حدد QuickJS بوضع التوجيه المستقل `"quickjs";` في بداية ملف `.js` أو `.mjs`, أو سم الملف `*.quickjs.js` لوضع script أو `*.quickjs.mjs` لوضع ES module, ثم شغله بصورة عادية من AutoJs6.
 
 > يقبل الإصدار 1.0 لقطة مصدر ثابتة واحدة لكل طلب. لا ينقل شجرة مشروع ولا يحل imports نسبية, ولا يعرض عمدا globals الخاصة بـ AutoJs6 أو Java bridge أو filesystem أو network أو وحدتي `std` و `os`.
 
@@ -136,7 +136,7 @@ default stack limit: 1 MiB
 _2026/09/02_
 
 - `تنبيه` يقبل release الأول immutable JavaScript source snapshot واحدة ولا يقدم AutoJs6 globals أو Java bridge أو filesystem أو network أو timers أو native addons أو multi-file imports
-- `ميزة` يشغل JavaScript بمحرك QuickJS 2026-06-04 الرسمي المضمن والمحدد بالتوجيه `"quickjs";`, من دون تحويل التنفيذ إلى Rhino أو Node.js أو Bun
+- `ميزة` يشغل JavaScript بمحرك QuickJS 2026-06-04 الرسمي المضمن والمحدد بالتوجيه `"quickjs";` أو العلامتين `*.quickjs.js` و `*.quickjs.mjs`, من دون تحويل التنفيذ إلى Rhino أو Node.js أو Bun
 - `ميزة` يكتشف runtime service محمية بعقد AIDL ذي إصدار, وينقل source عبر `ParcelFileDescriptor`, ويبث أحداث stdout و stderr المحدودة عبر oneway callbacks
 - `ميزة` يدعم scripts و ES modules بملف واحد مع BigInt و Unicode و Promise jobs و top-level await و errors و timeout وحدود output و memory و stack و cancellation و prewarm
 - `ميزة` يوفر حزم APK من أنواع `arm64-v8a` و `armeabi-v7a` و `x86_64` و `x86` و `universal` بالعقد نفسه للمحرك الأصلي
