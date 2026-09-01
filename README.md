@@ -123,7 +123,7 @@ default stack limit: 1 MiB
 
 `QuickJsRuntimeService` 通过 action `org.autojs.plugin.quickjs.RUNTIME` 和 category `quickjs` 被发现. `runScript` 接收请求 Bundle 和只读源码描述符, 通过回调流式返回有界 stdout 与 stderr 事件, 并返回包含状态, 时间和诊断的终止 Bundle. `cancelScript` 可在调度前或执行中安全调用, `prewarmRuntime` 会执行原生引擎就绪检查.
 
-16 KB 状态: 原生链接器已配置 16 KB 最大页面大小, APK 校验器会检查每个 ELF PT_LOAD 对齐以及未压缩 ZIP 数据对齐. 尚未在真实 16 KB 页面大小设备或模拟器上运行, 因此暂不声明端到端 16 KB 运行时支持.
+16 KB 状态: 原生链接器已配置 16 KB 最大页面大小, APK 校验器会检查每个 ELF PT_LOAD 对齐以及未压缩 ZIP 数据对齐. 已在 API 37 x86_64 `google_apis_ps16k` 模拟器上完成端到端运行验证 (`PAGE_SIZE=16384`), 3 组 Binder 与 QuickJS 仪器测试全部通过.
 
 ******
 
@@ -143,7 +143,7 @@ _2026/09/02_
 - `功能` 提供 Wake 激活, 完整 PluginInfo 元数据, 以及 10 种语言的插件中心说明, README 和 changelog
 - `改进` 在隔离的 `:quickjs_runtime` 进程中为每个请求创建全新 `JSRuntime` 和 `JSContext`, 并且不编译 `quickjs-libc` 及文件系统和网络辅助代码
 - `改进` 按归档 URL, 归档 SHA-256, 上游 commit, 单文件大小和单文件 SHA-256 固定逐字节一致的官方源码
-- `改进` 以 16 KB 页面对齐构建原生库, 并验证 ELF PT_LOAD 以及 APK 未压缩数据对齐, 同时明确记录尚未完成真实 16 KB 页面大小运行测试
+- `改进` 以 16 KB 页面对齐构建原生库, 验证 ELF PT_LOAD 与 APK 未压缩数据对齐, 并在报告 `PAGE_SIZE=16384` 的 API 37 x86_64 `google_apis_ps16k` 模拟器上通过全部 3 组 Binder 与 QuickJS 仪器测试
 - `改进` 在真实 Android 9, 12, 13 和 15 arm64 设备上覆盖 runtime 行为, 并提供 JVM 测试, instrumentation 测试, Android Lint, 源码验证和 APK 清单检查
 - `依赖` 内嵌采用 MIT 许可证的官方 QuickJS 2026-06-04 源码, 对应 commit [`3d5e064e9dd67c70f7962836505a7fa067bf0a4e`](https://github.com/bellard/quickjs/commit/3d5e064e9dd67c70f7962836505a7fa067bf0a4e)
 

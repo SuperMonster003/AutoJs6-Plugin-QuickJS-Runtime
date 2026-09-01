@@ -35,7 +35,7 @@
   "h3_plugin_interface": "外掛介面",
   "p_plugin_interface": "供 AutoJs6 宿主和外掛開發者使用的穩定識別碼和限制",
   "p_contract": "`QuickJsRuntimeService` 經 action `{{ plugin_service_action }}` 和 category `{{ plugin_service_category }}` 被發現. `runScript` 接收請求 Bundle 和唯讀原始碼 descriptor, 經 callback 串流回傳有界 stdout 與 stderr 事件, 並回傳包含狀態, 時間和診斷的終止 Bundle. `cancelScript` 可在排程前或執行期間安全呼叫, `prewarmRuntime` 會執行原生引擎就緒檢查.",
-  "p_16kb_status": "16 KB 狀態: 原生 linker 已設定 16 KB 最大 page size, APK 驗證器會檢查每個 ELF PT_LOAD 對齊以及未壓縮 ZIP data 對齊. 尚未在真實 16 KB page size 裝置或 emulator 上執行, 因此暫不聲稱端到端 16 KB 執行環境支援.",
+  "p_16kb_status": "16 KB 狀態: 原生 linker 已設定 16 KB 最大 page size, APK 驗證器會檢查每個 ELF PT_LOAD 對齊以及未壓縮 ZIP data 對齊. 已在 API 37 x86_64 `google_apis_ps16k` emulator 上完成端到端執行驗證 (`PAGE_SIZE=16384`), 3 組 Binder 與 QuickJS instrumentation 測試全部通過.",
   "h3_release_history": "發行記錄",
   "h5_more_release_history": "更多發行記錄",
   "h3_build": "建置和驗證",

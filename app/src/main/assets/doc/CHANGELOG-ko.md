@@ -16,6 +16,6 @@
 * `기능` Wake activation, 전체 PluginInfo metadata, 10개 언어의 instruction, README, changelog를 제공합니다
 * `개선` 격리된 `:quickjs_runtime` 프로세스에서 요청마다 새 `JSRuntime`과 `JSContext`를 만들고 `quickjs-libc`, filesystem helper, network helper를 제외합니다
 * `개선` 공식 byte-exact source를 archive URL, archive SHA-256, upstream commit, 각 file size, 각 SHA-256으로 고정합니다
-* `개선` Native library를 16 KB alignment로 빌드하고 ELF PT_LOAD와 uncompressed APK data alignment를 검증하며 실제 16 KB page test가 완료되지 않았음을 기록합니다
+* `개선` Native library를 16 KB alignment로 빌드하고 ELF PT_LOAD와 uncompressed APK data alignment를 검증하며 `PAGE_SIZE=16384`인 API 37 x86_64 `google_apis_ps16k` emulator에서 Binder와 QuickJS instrumentation suite 3개를 모두 통과합니다
 * `개선` 실제 Android 9, 12, 13, 15 arm64 기기에서 runtime을 확인하고 JVM test, instrumentation test, Android Lint, source verification, APK inventory check를 추가합니다
 * `의존성` MIT license의 공식 QuickJS 2026-06-04 source를 commit [`3d5e064e9dd67c70f7962836505a7fa067bf0a4e`](https://github.com/bellard/quickjs/commit/3d5e064e9dd67c70f7962836505a7fa067bf0a4e)에서 포함합니다

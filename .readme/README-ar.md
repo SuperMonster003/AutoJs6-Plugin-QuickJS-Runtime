@@ -123,7 +123,7 @@ default stack limit: 1 MiB
 
 يكتشف `QuickJsRuntimeService` عبر action `org.autojs.plugin.quickjs.RUNTIME` و category `quickjs`. يستقبل `runScript` request Bundle و source descriptor للقراءة فقط, ويرسل أحداث stdout و stderr المحدودة عبر callback, ثم يعيد terminal Bundle فيه الحالة والتوقيت والتشخيص. يكون `cancelScript` آمنا قبل dispatch وأثناءه, ويتحقق `prewarmRuntime` من جاهزية native engine.
 
-حالة 16 KB: يضبط native linker على maximum page size يبلغ 16 KB, ويتحقق APK verifier من alignment لكل ELF PT_LOAD ومن بيانات ZIP غير المضغوطة. لم يجر التشغيل بعد على جهاز أو emulator حقيقي بصفحات 16 KB, لذلك لا ندعي دعما كاملا.
+حالة 16 KB: يضبط native linker على maximum page size يبلغ 16 KB, ويتحقق APK verifier من alignment لكل ELF PT_LOAD ومن بيانات ZIP غير المضغوطة. اكتمل التحقق من التنفيذ طرفا إلى طرف على emulator `google_apis_ps16k` بمعمارية x86_64 وAPI 37 أبلغ عن `PAGE_SIZE=16384`; وقد نجحت مجموعات اختبارات Binder وQuickJS الثلاث جميعها.
 
 ******
 
@@ -143,7 +143,7 @@ _2026/09/02_
 - `ميزة` يوفر Wake activation و metadata كاملة لـ PluginInfo وتعليمات و README و changelog بعشر لغات
 - `تحسين` ينشئ `JSRuntime` و `JSContext` جديدين لكل طلب في العملية المعزولة `:quickjs_runtime` ويستبعد `quickjs-libc` و filesystem helpers و network helpers
 - `تحسين` يثبت source files الرسمية المطابقة byte-exact بواسطة URL و SHA-256 للأرشيف و upstream commit وحجم و SHA-256 لكل ملف
-- `تحسين` يبني native libraries مع alignment يبلغ 16 KB ويتحقق من ELF PT_LOAD و uncompressed APK data alignment مع تسجيل عدم اكتمال اختبار حقيقي لصفحات 16 KB
+- `تحسين` يبني native libraries مع alignment يبلغ 16 KB ويتحقق من ELF PT_LOAD وuncompressed APK data alignment, وينجح في مجموعات اختبارات Binder وQuickJS الثلاث على emulator `google_apis_ps16k` بمعمارية x86_64 وAPI 37 مع `PAGE_SIZE=16384`
 - `تحسين` يغطي runtime على أجهزة arm64 حقيقية بنظام Android 9 و 12 و 13 و 15, مع JVM tests و instrumentation tests و Android Lint و source verification و APK inventory
 - `اعتماد` يضمن source QuickJS 2026-06-04 الرسمي بترخيص MIT من commit [`3d5e064e9dd67c70f7962836505a7fa067bf0a4e`](https://github.com/bellard/quickjs/commit/3d5e064e9dd67c70f7962836505a7fa067bf0a4e)
 

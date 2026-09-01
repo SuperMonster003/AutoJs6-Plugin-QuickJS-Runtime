@@ -35,7 +35,7 @@
   "h3_plugin_interface": "واجهة الإضافة",
   "p_plugin_interface": "معرفات وحدود ثابتة لمطوري host وإضافة AutoJs6",
   "p_contract": "يكتشف `QuickJsRuntimeService` عبر action `{{ plugin_service_action }}` و category `{{ plugin_service_category }}`. يستقبل `runScript` request Bundle و source descriptor للقراءة فقط, ويرسل أحداث stdout و stderr المحدودة عبر callback, ثم يعيد terminal Bundle فيه الحالة والتوقيت والتشخيص. يكون `cancelScript` آمنا قبل dispatch وأثناءه, ويتحقق `prewarmRuntime` من جاهزية native engine.",
-  "p_16kb_status": "حالة 16 KB: يضبط native linker على maximum page size يبلغ 16 KB, ويتحقق APK verifier من alignment لكل ELF PT_LOAD ومن بيانات ZIP غير المضغوطة. لم يجر التشغيل بعد على جهاز أو emulator حقيقي بصفحات 16 KB, لذلك لا ندعي دعما كاملا.",
+  "p_16kb_status": "حالة 16 KB: يضبط native linker على maximum page size يبلغ 16 KB, ويتحقق APK verifier من alignment لكل ELF PT_LOAD ومن بيانات ZIP غير المضغوطة. اكتمل التحقق من التنفيذ طرفا إلى طرف على emulator `google_apis_ps16k` بمعمارية x86_64 وAPI 37 أبلغ عن `PAGE_SIZE=16384`; وقد نجحت مجموعات اختبارات Binder وQuickJS الثلاث جميعها.",
   "h3_release_history": "سجل الإصدارات",
   "h5_more_release_history": "لمزيد من سجل الإصدارات",
   "h3_build": "البناء والتحقق",

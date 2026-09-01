@@ -35,7 +35,7 @@
   "h3_plugin_interface": "플러그인 인터페이스",
   "p_plugin_interface": "AutoJs6 host와 플러그인 개발자를 위한 안정적인 식별자와 제한",
   "p_contract": "`QuickJsRuntimeService`는 action `{{ plugin_service_action }}`와 category `{{ plugin_service_category }}`로 검색됩니다. `runScript`는 request Bundle과 read-only source descriptor를 받고 제한된 stdout과 stderr 이벤트를 callback으로 stream한 뒤 상태, 시간, 진단이 든 terminal Bundle을 반환합니다. `cancelScript`는 dispatch 전과 실행 중 안전하며 `prewarmRuntime`은 native engine readiness를 확인합니다.",
-  "p_16kb_status": "16 KB 상태: native linker는 16 KB maximum page size로 설정되며 APK verifier는 각 ELF PT_LOAD alignment와 uncompressed ZIP data alignment를 검사합니다. 실제 16 KB page-size 기기나 emulator에서 아직 실행하지 않았으므로 end-to-end 지원은 주장하지 않습니다.",
+  "p_16kb_status": "16 KB 상태: native linker는 16 KB maximum page size로 설정되며 APK verifier는 각 ELF PT_LOAD alignment와 uncompressed ZIP data alignment를 검사합니다. `PAGE_SIZE=16384`를 보고하는 API 37 x86_64 `google_apis_ps16k` emulator에서 end-to-end 실행을 검증했으며 Binder와 QuickJS instrumentation suite 3개가 모두 통과했습니다.",
   "h3_release_history": "릴리스 기록",
   "h5_more_release_history": "더 많은 릴리스 기록",
   "h3_build": "빌드와 검증",

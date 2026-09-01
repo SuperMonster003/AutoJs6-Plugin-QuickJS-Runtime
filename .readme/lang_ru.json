@@ -35,7 +35,7 @@
   "h3_plugin_interface": "Интерфейс плагина",
   "p_plugin_interface": "Стабильные идентификаторы и ограничения для разработчиков host и плагина AutoJs6",
   "p_contract": "`QuickJsRuntimeService` обнаруживается по action `{{ plugin_service_action }}` и category `{{ plugin_service_category }}`. `runScript` принимает request Bundle и read-only descriptor исходника, передает ограниченные события stdout и stderr через callback и возвращает terminal Bundle со статусом, временем и диагностикой. `cancelScript` безопасен до и во время dispatch, а `prewarmRuntime` проверяет готовность native engine.",
-  "p_16kb_status": "Статус 16 KB: native linker настроен на максимальный размер страницы 16 KB, а APK verifier проверяет PT_LOAD alignment каждого ELF и alignment несжатых ZIP данных. Проверка на реальном устройстве или emulator со страницами 16 KB еще не выполнена, поэтому полная поддержка не заявляется.",
+  "p_16kb_status": "Статус 16 KB: native linker настроен на максимальный размер страницы 16 KB, а APK verifier проверяет PT_LOAD alignment каждого ELF и alignment несжатых ZIP данных. Сквозное выполнение проверено на x86_64 emulator `google_apis_ps16k` с API 37 и `PAGE_SIZE=16384`; все три набора instrumentation-тестов Binder и QuickJS успешно пройдены.",
   "h3_release_history": "История выпусков",
   "h5_more_release_history": "Дополнительная история выпусков",
   "h3_build": "Сборка и проверка",

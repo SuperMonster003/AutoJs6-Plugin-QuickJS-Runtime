@@ -35,7 +35,7 @@
   "h3_plugin_interface": "プラグインインターフェイス",
   "p_plugin_interface": "AutoJs6 host と plugin developer 向けの安定 identifier と limit",
   "p_contract": "`QuickJsRuntimeService` は action `{{ plugin_service_action }}` と category `{{ plugin_service_category }}` で検出されます. `runScript` は request Bundle と read-only source descriptor を受け取り, bounded stdout と stderr event を callback で stream し, status, timing, diagnostic を含む terminal Bundle を返します. `cancelScript` は dispatch の前後で安全に呼べ, `prewarmRuntime` は native engine readiness を確認します.",
-  "p_16kb_status": "16 KB 状態: native linker は 16 KB maximum page size に設定され, APK verifier は各 ELF PT_LOAD alignment と uncompressed ZIP data alignment を確認します. 実際の 16 KB page-size 端末または emulator ではまだ実行していないため, end-to-end support は表明しません.",
+  "p_16kb_status": "16 KB 状態: native linker は 16 KB maximum page size に設定され, APK verifier は各 ELF PT_LOAD alignment と uncompressed ZIP data alignment を確認します. `PAGE_SIZE=16384` を報告する API 37 x86_64 `google_apis_ps16k` emulator で end-to-end 実行を検証し, Binder と QuickJS の 3 件の instrumentation suite がすべて成功しました.",
   "h3_release_history": "リリース履歴",
   "h5_more_release_history": "その他のリリース履歴",
   "h3_build": "ビルドと検証",

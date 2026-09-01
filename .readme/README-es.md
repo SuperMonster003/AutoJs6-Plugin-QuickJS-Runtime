@@ -123,7 +123,7 @@ default stack limit: 1 MiB
 
 `QuickJsRuntimeService` se descubre mediante la acción `org.autojs.plugin.quickjs.RUNTIME` y la categoría `quickjs`. `runScript` recibe un Bundle de solicitud y un descriptor de código de solo lectura, transmite eventos stdout y stderr limitados por callback y devuelve un Bundle terminal con estado, tiempos y diagnósticos. `cancelScript` es seguro antes o durante el despacho y `prewarmRuntime` comprueba que el motor nativo esté listo.
 
-Estado de 16 KB: el linker nativo usa un tamaño máximo de página de 16 KB y el verificador de APK comprueba la alineación PT_LOAD de cada ELF y de datos ZIP sin comprimir. Aún no se ejecutó en un dispositivo o emulador real con páginas de 16 KB, por lo que no se afirma soporte integral.
+Estado de 16 KB: el linker nativo usa un tamaño máximo de página de 16 KB y el verificador de APK comprueba la alineación PT_LOAD de cada ELF y de datos ZIP sin comprimir. La ejecución integral se validó en un emulador x86_64 `google_apis_ps16k` con API 37 que informó `PAGE_SIZE=16384`; las tres suites de instrumentación de Binder y QuickJS pasaron.
 
 ******
 
@@ -143,7 +143,7 @@ _2026/09/02_
 - `Función` Incluye activación Wake, metadatos PluginInfo completos e instrucciones, README y changelog en 10 idiomas
 - `Mejora` Crea `JSRuntime` y `JSContext` nuevos por solicitud en el proceso aislado `:quickjs_runtime` y omite `quickjs-libc` y helpers de archivos y red
 - `Mejora` Fija fuentes oficiales idénticas byte a byte por URL, SHA-256 del archivo, commit upstream, tamaño y SHA-256 de cada archivo
-- `Mejora` Compila bibliotecas nativas con alineación de 16 KB y verifica ELF PT_LOAD y datos APK sin comprimir, dejando constancia de que aún no existe prueba real con páginas de 16 KB
+- `Mejora` Compila bibliotecas nativas con alineación de 16 KB, verifica ELF PT_LOAD y datos APK sin comprimir, y supera las tres suites de instrumentación de Binder y QuickJS en un emulador x86_64 `google_apis_ps16k` con API 37 y `PAGE_SIZE=16384`
 - `Mejora` Cubre el runtime en dispositivos arm64 reales Android 9, 12, 13 y 15, además de pruebas JVM e instrumentación, Android Lint, verificación de fuentes e inventario APK
 - `Dependencia` Integra las fuentes oficiales QuickJS 2026-06-04 con licencia MIT del commit [`3d5e064e9dd67c70f7962836505a7fa067bf0a4e`](https://github.com/bellard/quickjs/commit/3d5e064e9dd67c70f7962836505a7fa067bf0a4e)
 

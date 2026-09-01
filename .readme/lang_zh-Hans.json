@@ -35,7 +35,7 @@
   "h3_plugin_interface": "插件接口",
   "p_plugin_interface": "供 AutoJs6 宿主和插件开发者使用的稳定标识和限制",
   "p_contract": "`QuickJsRuntimeService` 通过 action `{{ plugin_service_action }}` 和 category `{{ plugin_service_category }}` 被发现. `runScript` 接收请求 Bundle 和只读源码描述符, 通过回调流式返回有界 stdout 与 stderr 事件, 并返回包含状态, 时间和诊断的终止 Bundle. `cancelScript` 可在调度前或执行中安全调用, `prewarmRuntime` 会执行原生引擎就绪检查.",
-  "p_16kb_status": "16 KB 状态: 原生链接器已配置 16 KB 最大页面大小, APK 校验器会检查每个 ELF PT_LOAD 对齐以及未压缩 ZIP 数据对齐. 尚未在真实 16 KB 页面大小设备或模拟器上运行, 因此暂不声明端到端 16 KB 运行时支持.",
+  "p_16kb_status": "16 KB 状态: 原生链接器已配置 16 KB 最大页面大小, APK 校验器会检查每个 ELF PT_LOAD 对齐以及未压缩 ZIP 数据对齐. 已在 API 37 x86_64 `google_apis_ps16k` 模拟器上完成端到端运行验证 (`PAGE_SIZE=16384`), 3 组 Binder 与 QuickJS 仪器测试全部通过.",
   "h3_release_history": "发布历史",
   "h5_more_release_history": "更多发布历史",
   "h3_build": "构建和验证",
