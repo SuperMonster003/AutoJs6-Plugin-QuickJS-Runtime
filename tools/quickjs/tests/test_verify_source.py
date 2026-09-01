@@ -33,6 +33,7 @@ class VerifySourceTest(unittest.TestCase):
                     {
                         "schemaVersion": 1,
                         "upstream": verify_source.REQUIRED_UPSTREAM,
+                        "androidBuild": verify_source.REQUIRED_ANDROID_BUILD,
                         "vendorRoot": "vendor",
                         "files": [
                             {

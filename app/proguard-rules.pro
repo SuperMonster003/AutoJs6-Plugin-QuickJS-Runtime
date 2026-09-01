@@ -4,3 +4,4 @@
 -keep class io.github.supermonster003.autojs6.plugin.quickjs.runtime.** extends android.app.Activity { *; }
 -keep class io.github.supermonster003.autojs6.plugin.quickjs.runtime.NativeQuickJsRuntime { *; }
 -keep class io.github.supermonster003.autojs6.plugin.quickjs.runtime.** implements io.github.supermonster003.autojs6.plugin.quickjs.runtime.NativeQuickJsRuntime$OutputSink { *; }
+-dontwarn kotlinx.parcelize.Parcelize

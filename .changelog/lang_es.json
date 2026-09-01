@@ -1,0 +1,31 @@
+{
+  "changelog_label_hint": "Aviso",
+  "changelog_label_feature": "Función",
+  "changelog_label_fix": "Corrección",
+  "changelog_label_improvement": "Mejora",
+  "changelog_label_dependency": "Dependencia",
+  "$data": {
+    "v1.0.0": {
+      "released_date": "2026/09/02",
+      "hint": [
+        "La primera versión acepta una instantánea inmutable de JavaScript y no ofrece globales AutoJs6, puente Java, sistema de archivos, red, timers, addons nativos ni imports de varios archivos"
+      ],
+      "feature": [
+        "Ejecuta JavaScript con el motor oficial integrado QuickJS {{ quickjs_version }} elegido por la directiva `\"quickjs\";`, sin reenviar la ejecución a Rhino, Node.js o Bun",
+        "Descubre un runtime service protegido mediante AIDL versionado, transfiere el código con `ParcelFileDescriptor` y transmite eventos stdout y stderr limitados por callbacks oneway",
+        "Admite scripts y módulos ES de un archivo con BigInt, Unicode, jobs Promise, top-level await, errores, timeout, límites de salida, memoria y stack, cancelación y precalentamiento",
+        "Publica APK `arm64-v8a`, `armeabi-v7a`, `x86_64`, `x86` y `universal` con el mismo contrato de motor nativo",
+        "Incluye activación Wake, metadatos PluginInfo completos e instrucciones, README y changelog en 10 idiomas"
+      ],
+      "improvement": [
+        "Crea `JSRuntime` y `JSContext` nuevos por solicitud en el proceso aislado `:quickjs_runtime` y omite `quickjs-libc` y helpers de archivos y red",
+        "Fija fuentes oficiales idénticas byte a byte por URL, SHA-256 del archivo, commit upstream, tamaño y SHA-256 de cada archivo",
+        "Compila bibliotecas nativas con alineación de 16 KB y verifica ELF PT_LOAD y datos APK sin comprimir, dejando constancia de que aún no existe prueba real con páginas de 16 KB",
+        "Cubre el runtime en dispositivos arm64 reales Android 9, 12, 13 y 15, además de pruebas JVM e instrumentación, Android Lint, verificación de fuentes e inventario APK"
+      ],
+      "dependency": [
+        "Integra las fuentes oficiales QuickJS {{ quickjs_version }} con licencia MIT del commit [`{{ quickjs_commit }}`]({{ quickjs_commit_url }})"
+      ]
+    }
+  }
+}

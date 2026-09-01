@@ -157,6 +157,21 @@ tasks.matching { it.name.startsWith("configureCMake") }.configureEach {
     dependsOn("verifyQuickJsSource")
 }
 
+tasks.register<Exec>("verifyDebugApkVariants") {
+    group = "verification"
+    description = "Verifies split APK inventory, native ABIs, and 16 KB ELF and ZIP alignment."
+    dependsOn("assembleDebug", "assembleDebugAndroidTest")
+    commandLine(
+        pythonCommand,
+        "-B",
+        rootProject.file("tools/quickjs/verify_apk_variants.py"),
+        layout.buildDirectory.dir("outputs/apk/debug").get().asFile,
+        "debug",
+        "--instrumentation-apk",
+        layout.buildDirectory.file("outputs/apk/androidTest/debug/app-debug-androidTest.apk").get().asFile,
+    )
+}
+
 tasks.register<Copy>("appendDigestToReleasedFiles") {
     description = "Collects signed ABI and universal APKs with CRC32 in each name."
     val ext = utils.FILE_EXTENSION_APK
