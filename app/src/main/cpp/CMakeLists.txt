@@ -45,6 +45,7 @@ target_compile_options(autojs_quickjs_runtime PRIVATE
 # requirement explicit so a future toolchain change cannot silently regress it.
 target_link_options(autojs_quickjs_runtime PRIVATE
     "-Wl,-z,max-page-size=16384"
+    "-Wl,-z,common-page-size=16384"
 )
 
 target_link_libraries(autojs_quickjs_runtime PRIVATE log m)

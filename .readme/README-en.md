@@ -131,6 +131,12 @@ default stack limit: 1 MiB
 
 ******
 
+#### v1.0.1
+
+_2026/09/11_
+
+- `Improvement` Build verification of 16 KB page alignment for 64-bit native libraries, including manifest contract checks and JSON reports
+
 #### v1.0.0
 
 _2026/09/02_
@@ -206,3 +212,6 @@ Plugin code is licensed under the [Mozilla Public License 2.0](https://github.co
 - QuickJS documentation: https://bellard.org/quickjs/quickjs.html
 - QuickJS source repository: https://github.com/bellard/quickjs
 - Third-party notices: https://github.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/blob/master/THIRD_PARTY_NOTICES.md
+
+
+[16 KB page alignment and build verification](https://github.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/blob/master/docs/16kb.md)

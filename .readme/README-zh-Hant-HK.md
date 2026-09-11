@@ -131,6 +131,12 @@ default stack limit: 1 MiB
 
 ******
 
+#### v1.0.1
+
+_2026/09/11_
+
+- `改善` 建置階段校驗 64 位原生程式庫的 16 KB 頁面大小對齊, 檢查 manifest 契約並輸出 JSON 報告
+
 #### v1.0.0
 
 _2026/09/02_
@@ -206,3 +212,6 @@ app/src/main/res/raw*/plugin_instruction.md
 - QuickJS 文件: https://bellard.org/quickjs/quickjs.html
 - QuickJS 源碼倉庫: https://github.com/bellard/quickjs
 - 第三方聲明: https://github.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/blob/master/THIRD_PARTY_NOTICES.md
+
+
+[16 KB page alignment and build verification](https://github.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/blob/master/docs/16kb.md)
