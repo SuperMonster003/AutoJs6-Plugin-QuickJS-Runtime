@@ -16,6 +16,7 @@
 output.json
 output-metadata.json
 desktop.ini
+AGENTS.md
 
 .bak/
 .git/
