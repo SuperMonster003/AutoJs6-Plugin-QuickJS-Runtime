@@ -173,3 +173,6 @@ app/src/main/res/raw*/plugin_instruction.md
 - {{ text_link_quickjs_docs }}: {{ quickjs_documentation_url }}
 - {{ text_link_quickjs_source }}: {{ quickjs_repository_url }}
 - {{ text_link_third_party_notices }}: {{ third_party_notices_url }}
+
+
+[16 KB page alignment and build verification](https://github.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/blob/master/docs/16kb.md)

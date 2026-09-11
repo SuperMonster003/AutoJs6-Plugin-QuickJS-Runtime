@@ -131,6 +131,12 @@ Estado de 16 KB: el linker nativo usa un tamaño máximo de página de 16 KB y e
 
 ******
 
+#### v1.0.1
+
+_2026/09/11_
+
+- `Mejora` Verificación de compilación de la alineación de páginas de 16 KB en bibliotecas nativas de 64 bits, con controles del contrato manifest e informes JSON
+
 #### v1.0.0
 
 _2026/09/02_
@@ -206,3 +212,6 @@ El código del complemento usa [Mozilla Public License 2.0](https://github.com/S
 - Documentación de QuickJS: https://bellard.org/quickjs/quickjs.html
 - Repositorio fuente de QuickJS: https://github.com/bellard/quickjs
 - Avisos de terceros: https://github.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/blob/master/THIRD_PARTY_NOTICES.md
+
+
+[16 KB page alignment and build verification](https://github.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/blob/master/docs/16kb.md)

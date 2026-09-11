@@ -131,6 +131,12 @@ default stack limit: 1 MiB
 
 ******
 
+#### v1.0.1
+
+_2026/09/11_
+
+- `개선` 64비트 네이티브 라이브러리의 16 KB 페이지 정렬을 빌드 시 검증, manifest 계약 검사 및 JSON 보고서 지원
+
 #### v1.0.0
 
 _2026/09/02_
@@ -206,3 +212,6 @@ app/src/main/res/raw*/plugin_instruction.md
 - QuickJS 문서: https://bellard.org/quickjs/quickjs.html
 - QuickJS 소스 저장소: https://github.com/bellard/quickjs
 - 제3자 고지: https://github.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/blob/master/THIRD_PARTY_NOTICES.md
+
+
+[16 KB page alignment and build verification](https://github.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/blob/master/docs/16kb.md)

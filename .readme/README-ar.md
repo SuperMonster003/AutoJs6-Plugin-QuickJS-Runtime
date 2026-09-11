@@ -131,6 +131,12 @@ default stack limit: 1 MiB
 
 ******
 
+#### v1.0.1
+
+_2026/09/11_
+
+- `تحسين` التحقق أثناء البناء من محاذاة صفحات 16 KB للمكتبات الأصلية ذات 64 بت, مع فحص عقد manifest وتقارير JSON
+
 #### v1.0.0
 
 _2026/09/02_
@@ -206,3 +212,6 @@ app/src/main/res/raw*/plugin_instruction.md
 - وثائق QuickJS: https://bellard.org/quickjs/quickjs.html
 - مستودع source الخاص بـ QuickJS: https://github.com/bellard/quickjs
 - إشعارات الطرف الثالث: https://github.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/blob/master/THIRD_PARTY_NOTICES.md
+
+
+[16 KB page alignment and build verification](https://github.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/blob/master/docs/16kb.md)
