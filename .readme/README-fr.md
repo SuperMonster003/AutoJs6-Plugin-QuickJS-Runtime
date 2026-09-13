@@ -131,6 +131,12 @@ default stack limit: 1 MiB
 
 ******
 
+#### v1.0.2
+
+_2026/09/13_
+
+- `Correction` Utiliser des dates de compilation en anglais indépendamment de la langue de la machine
+
 #### v1.0.1
 
 _2026/09/13_
