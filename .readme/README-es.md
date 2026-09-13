@@ -131,6 +131,12 @@ Estado de 16 KB: el linker nativo usa un tamaño máximo de página de 16 KB y e
 
 ******
 
+#### v1.0.2
+
+_2026/09/13_
+
+- `Corrección` Usar fechas de compilación en inglés independientemente del idioma de la máquina
+
 #### v1.0.1
 
 _2026/09/13_

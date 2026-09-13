@@ -4,6 +4,12 @@
 
 ******
 
+# v1.0.2
+
+###### 2026/09/13
+
+* `Corrección` Usar fechas de compilación en inglés independientemente del idioma de la máquina
+
 # v1.0.1
 
 ###### 2026/09/13

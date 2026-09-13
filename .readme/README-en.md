@@ -131,6 +131,12 @@ default stack limit: 1 MiB
 
 ******
 
+#### v1.0.2
+
+_2026/09/13_
+
+- `Fix` Use English build dates in plugin metadata regardless of the build machine locale
+
 #### v1.0.1
 
 _2026/09/13_
