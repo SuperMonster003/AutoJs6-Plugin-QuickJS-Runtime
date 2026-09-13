@@ -133,9 +133,10 @@ default stack limit: 1 MiB
 
 #### v1.0.1
 
-_2026/09/11_
+_2026/09/13_
 
 - `Improvement` Build verification of 16 KB page alignment for 64-bit native libraries, including manifest contract checks and JSON reports
+- `Improvement` Host activation, plugin metadata, localized documentation and signed release collection follow the common plugin conventions
 
 #### v1.0.0
 
