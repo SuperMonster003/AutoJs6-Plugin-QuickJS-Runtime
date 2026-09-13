@@ -56,3 +56,9 @@ __pycache__/
 
 **/assets-app/declarations/
 **/assets-app/sample/declarations/
+
+*.keystore
+
+*.pre-platform-versions.bak
+
+/app/releases/

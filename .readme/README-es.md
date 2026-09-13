@@ -133,9 +133,10 @@ Estado de 16 KB: el linker nativo usa un tamaño máximo de página de 16 KB y e
 
 #### v1.0.1
 
-_2026/09/11_
+_2026/09/13_
 
 - `Mejora` Verificación de compilación de la alineación de páginas de 16 KB en bibliotecas nativas de 64 bits, con controles del contrato manifest e informes JSON
+- `Mejora` Activación del host, metadatos, documentación traducida y recopilación de APK firmados conforme a las convenciones comunes
 
 #### v1.0.0
 

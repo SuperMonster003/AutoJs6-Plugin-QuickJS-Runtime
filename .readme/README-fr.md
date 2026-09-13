@@ -133,9 +133,10 @@ default stack limit: 1 MiB
 
 #### v1.0.1
 
-_2026/09/11_
+_2026/09/13_
 
 - `Amélioration` Vérification à la compilation de l'alignement des pages de 16 KB des bibliothèques natives 64 bits, avec contrôle du contrat manifest et rapports JSON
+- `Amélioration` Harmonisation de l'activation, des métadonnées, de la documentation traduite et de la collecte des APK signés
 
 #### v1.0.0
 

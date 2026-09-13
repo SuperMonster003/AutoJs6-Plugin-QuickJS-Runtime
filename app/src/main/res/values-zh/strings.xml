@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="plugin_description">在独立 Android 进程中使用独立 QuickJS 引擎运行 JavaScript</string>
 </resources>
