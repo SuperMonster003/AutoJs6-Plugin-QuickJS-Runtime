@@ -39,7 +39,7 @@
   "h3_release_history": "Release History",
   "h5_more_release_history": "For more release history",
   "h3_build": "Build and Verification",
-  "p_build_intro": "Building requires JDK 17 or later, Python 3, Android SDK 36, NDK 28.2.13676358, and CMake 3.22.1. The standard checks verify the pinned QuickJS source, generated documentation, JVM tests, all APK variants, instrumentation packaging, Android Lint, ELF alignment, and native-library inventory.",
+  "p_build_intro": "Building requires JDK 17 or later, Python 3, Android SDK 37, NDK 28.2.13676358, and CMake 3.22.1. The standard checks verify the pinned QuickJS source, generated documentation, JVM tests, all APK variants, instrumentation packaging, Android Lint, ELF alignment, and native-library inventory.",
   "h3_localization": "Localization and Docs Generation",
   "p_localization": "Edit the JSON and Markdown templates, then run `py .python/generate_markdown.py`. Generated README, changelog, and plugin-instruction files must not be edited by hand. The `--check` mode validates language shape, version alignment, localized resources, orphan files, and generated-file drift without writing.",
   "h3_license": "License",

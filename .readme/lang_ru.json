@@ -39,7 +39,7 @@
   "h3_release_history": "История выпусков",
   "h5_more_release_history": "Дополнительная история выпусков",
   "h3_build": "Сборка и проверка",
-  "p_build_intro": "Для сборки нужны JDK 17 или новее, Python 3, Android SDK 36, NDK 28.2.13676358 и CMake 3.22.1. Стандартные проверки охватывают закрепленные исходники QuickJS, созданные документы, JVM tests, все APK variants, instrumentation package, Android Lint, ELF alignment и перечень native libraries.",
+  "p_build_intro": "Для сборки нужны JDK 17 или новее, Python 3, Android SDK 37, NDK 28.2.13676358 и CMake 3.22.1. Стандартные проверки охватывают закрепленные исходники QuickJS, созданные документы, JVM tests, все APK variants, instrumentation package, Android Lint, ELF alignment и перечень native libraries.",
   "h3_localization": "Локализация и создание документов",
   "p_localization": "Измените JSON и Markdown templates, затем выполните `py .python/generate_markdown.py`. Не редактируйте созданные README, changelog и инструкции вручную. Режим `--check` без записи проверяет структуру языков, версию, локализованные ресурсы, лишние файлы и drift.",
   "h3_license": "Лицензия",

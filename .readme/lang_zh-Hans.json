@@ -39,7 +39,7 @@
   "h3_release_history": "发布历史",
   "h5_more_release_history": "更多发布历史",
   "h3_build": "构建和验证",
-  "p_build_intro": "构建需要 JDK 17 或更高版本, Python 3, Android SDK 36, NDK 28.2.13676358 和 CMake 3.22.1. 标准检查会验证固定 QuickJS 源码, 生成文档, JVM 测试, 全部 APK 变体, instrumentation 包, Android Lint, ELF 对齐和原生库清单.",
+  "p_build_intro": "构建需要 JDK 17 或更高版本, Python 3, Android SDK 37, NDK 28.2.13676358 和 CMake 3.22.1. 标准检查会验证固定 QuickJS 源码, 生成文档, JVM 测试, 全部 APK 变体, instrumentation 包, Android Lint, ELF 对齐和原生库清单.",
   "h3_localization": "本地化和文档生成",
   "p_localization": "编辑 JSON 和 Markdown 模板后运行 `py .python/generate_markdown.py`. 不要手动编辑生成的 README, changelog 或插件说明文件. `--check` 模式会在不写入文件的情况下验证语言结构, 版本一致性, 本地化资源, 孤立文件和生成文件漂移.",
   "h3_license": "许可证",

@@ -39,7 +39,7 @@
   "h3_release_history": "릴리스 기록",
   "h5_more_release_history": "더 많은 릴리스 기록",
   "h3_build": "빌드와 검증",
-  "p_build_intro": "빌드에는 JDK 17 이상, Python 3, Android SDK 36, NDK 28.2.13676358, CMake 3.22.1이 필요합니다. 표준 검사는 고정 QuickJS source, 생성 문서, JVM test, 모든 APK variant, instrumentation package, Android Lint, ELF alignment, native library inventory를 검증합니다.",
+  "p_build_intro": "빌드에는 JDK 17 이상, Python 3, Android SDK 37, NDK 28.2.13676358, CMake 3.22.1이 필요합니다. 표준 검사는 고정 QuickJS source, 생성 문서, JVM test, 모든 APK variant, instrumentation package, Android Lint, ELF alignment, native library inventory를 검증합니다.",
   "h3_localization": "현지화와 문서 생성",
   "p_localization": "JSON과 Markdown template를 편집한 뒤 `py .python/generate_markdown.py`를 실행합니다. 생성된 README, changelog, plugin instruction 파일을 직접 편집하지 마십시오. `--check`는 파일을 쓰지 않고 language shape, version alignment, localized resource, orphan file, drift를 검증합니다.",
   "h3_license": "라이선스",

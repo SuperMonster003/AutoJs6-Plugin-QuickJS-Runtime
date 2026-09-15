@@ -39,7 +39,7 @@
   "h3_release_history": "リリース履歴",
   "h5_more_release_history": "その他のリリース履歴",
   "h3_build": "ビルドと検証",
-  "p_build_intro": "ビルドには JDK 17 以降, Python 3, Android SDK 36, NDK 28.2.13676358, CMake 3.22.1 が必要です. 標準 check は固定 QuickJS source, generated docs, JVM test, 全 APK variant, instrumentation package, Android Lint, ELF alignment, native library inventory を検証します.",
+  "p_build_intro": "ビルドには JDK 17 以降, Python 3, Android SDK 37, NDK 28.2.13676358, CMake 3.22.1 が必要です. 標準 check は固定 QuickJS source, generated docs, JVM test, 全 APK variant, instrumentation package, Android Lint, ELF alignment, native library inventory を検証します.",
   "h3_localization": "ローカライズと文書生成",
   "p_localization": "JSON と Markdown template を編集して `py .python/generate_markdown.py` を実行します. Generated README, changelog, plugin instruction を手動編集しないでください. `--check` は書き込みなしで language shape, version alignment, localized resource, orphan file, drift を検証します.",
   "h3_license": "ライセンス",
