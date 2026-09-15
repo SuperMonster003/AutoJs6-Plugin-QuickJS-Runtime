@@ -39,7 +39,7 @@
   "h3_release_history": "سجل الإصدارات",
   "h5_more_release_history": "لمزيد من سجل الإصدارات",
   "h3_build": "البناء والتحقق",
-  "p_build_intro": "يتطلب البناء JDK 17 أو أحدث, و Python 3, و Android SDK 36, و NDK 28.2.13676358, و CMake 3.22.1. تتحقق الفحوص القياسية من source QuickJS المثبت, والوثائق المولدة, و JVM tests, وكل APK variants, وحزمة instrumentation, و Android Lint, و ELF alignment, وجرد native libraries.",
+  "p_build_intro": "يتطلب البناء JDK 17 أو أحدث, و Python 3, و Android SDK 37, و NDK 28.2.13676358, و CMake 3.22.1. تتحقق الفحوص القياسية من source QuickJS المثبت, والوثائق المولدة, و JVM tests, وكل APK variants, وحزمة instrumentation, و Android Lint, و ELF alignment, وجرد native libraries.",
   "h3_localization": "الترجمة وتوليد الوثائق",
   "p_localization": "عدل JSON و Markdown templates ثم شغل `py .python/generate_markdown.py`. لا تعدل README أو changelog أو تعليمات الإضافة المولدة يدويا. يتحقق `--check` من بنية اللغات وتطابق الإصدار والموارد المترجمة والملفات اليتيمة و drift دون كتابة.",
   "h3_license": "الترخيص",

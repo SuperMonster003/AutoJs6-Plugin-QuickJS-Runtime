@@ -131,6 +131,12 @@ default stack limit: 1 MiB
 
 ******
 
+#### v1.0.3
+
+_2026/09/15_
+
+- `Amélioration` compileSdk et targetSdk passent à 37 (Android 17) ; le comportement du plugin ne dépend pas de la nouvelle cible
+
 #### v1.0.2
 
 _2026/09/13_
@@ -144,22 +150,6 @@ _2026/09/13_
 - `Amélioration` Vérification à la compilation de l'alignement des pages de 16 KB des bibliothèques natives 64 bits, avec contrôle du contrat manifest et rapports JSON
 - `Amélioration` Harmonisation de l'activation, des métadonnées, de la documentation traduite et de la collecte des APK signés
 
-#### v1.0.0
-
-_2026/09/02_
-
-- `Conseil` La première version accepte un instantané JavaScript immuable et ne fournit ni globales AutoJs6, pont Java, fichiers, réseau, timers, addons natifs, ni imports multi-fichiers
-- `Fonctionnalité` Exécute JavaScript avec le moteur officiel intégré QuickJS 2026-06-04 choisi par la directive `"quickjs";` ou les marqueurs `*.quickjs.js` et `*.quickjs.mjs`, sans transférer l'exécution vers Rhino, Node.js ou Bun
-- `Fonctionnalité` Découvre un runtime service protégé via AIDL versionné, transfère la source avec `ParcelFileDescriptor` et diffuse des événements stdout et stderr bornés par callbacks oneway
-- `Fonctionnalité` Prend en charge scripts et modules ES mono-fichier avec BigInt, Unicode, jobs Promise, top-level await, erreurs, timeout, limites de sortie, mémoire et stack, annulation et préchauffage
-- `Fonctionnalité` Livre les APK `arm64-v8a`, `armeabi-v7a`, `x86_64`, `x86` et `universal` avec le même contrat natif
-- `Fonctionnalité` Fournit activation Wake, métadonnées PluginInfo complètes, instructions, README et changelog dans 10 langues
-- `Amélioration` Crée un `JSRuntime` et un `JSContext` neufs par requête dans le processus isolé `:quickjs_runtime` et omet `quickjs-libc` ainsi que les helpers fichiers et réseau
-- `Amélioration` Fixe les sources officielles identiques octet par octet par URL, SHA-256 d'archive, commit upstream, taille et SHA-256 de chaque fichier
-- `Amélioration` Compile les bibliothèques natives avec alignement 16 KB, vérifie ELF PT_LOAD et données APK non compressées, puis réussit les trois suites d'instrumentation Binder et QuickJS sur un émulateur x86_64 `google_apis_ps16k` API 37 avec `PAGE_SIZE=16384`
-- `Amélioration` Couvre le runtime sur appareils arm64 réels Android 9, 12, 13 et 15, plus tests JVM et instrumentation, Android Lint, vérification source et inventaire APK
-- `Dépendance` Intègre les sources officielles QuickJS 2026-06-04 sous licence MIT au commit [`3d5e064e9dd67c70f7962836505a7fa067bf0a4e`](https://github.com/bellard/quickjs/commit/3d5e064e9dd67c70f7962836505a7fa067bf0a4e)
-
 ##### Historique supplémentaire
 
 - [CHANGELOG.md](https://github.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/blob/master/app/src/main/assets/doc/CHANGELOG-fr.md)
@@ -170,7 +160,7 @@ _2026/09/02_
 
 ******
 
-La compilation exige JDK 17 ou ultérieur, Python 3, Android SDK 36, NDK 28.2.13676358 et CMake 3.22.1. Les contrôles vérifient les sources QuickJS fixées, la documentation générée, les tests JVM, tous les APK, le paquet d'instrumentation, Android Lint, l'alignement ELF et l'inventaire natif.
+La compilation exige JDK 17 ou ultérieur, Python 3, Android SDK 37, NDK 28.2.13676358 et CMake 3.22.1. Les contrôles vérifient les sources QuickJS fixées, la documentation générée, les tests JVM, tous les APK, le paquet d'instrumentation, Android Lint, l'alignement ELF et l'inventaire natif.
 
 ```powershell
 py -B -m unittest discover -s tools\quickjs\tests -p "test_*.py"
