@@ -133,8 +133,9 @@ default stack limit: 1 MiB
 
 #### v1.0.3
 
-_2026/09/15_
+_2026/09/19_
 
+- `修正` AGP 9.1 構建時的 SDK XML v4 解析警告及 JVM 單元測試組裝任務誤觸發 APK 原生程式庫對齊檢查的問題 (共用構建外掛 1.8.3)
 - `改善` 將 compileSdk 與 targetSdk 提升到 37 (Android 17), 插件行為不受新目標版本影響
 
 #### v1.0.2
