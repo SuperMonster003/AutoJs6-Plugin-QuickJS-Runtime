@@ -111,7 +111,7 @@ jobs:
           target: google_apis
           arch: x86_64
           profile: pixel_2
-          script: ./gradlew connectedDebugAndroidTest -PrequiredApiLevel=${{ matrix.api_level }} --stacktrace
+          script: bash ./gradlew connectedDebugAndroidTest -PrequiredApiLevel=${{ matrix.api_level }} --stacktrace
 
   verify-16kb:
     name: Binder and QuickJS round trip (API 35, 16 KB pages)
