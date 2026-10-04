@@ -139,6 +139,7 @@ default stack limit: 1 MiB
 _2026/10/04_
 
 - `Improvement` Application and Plugin Center icons use a transparent colored lightning bolt, preserving the SVG proportions, spacing, gradients and inner shading, with reproducible Icon Studio adjustments
+- `Improvement` Plugin Center icons use the sizes, positions, light and dark artwork, and circular backgrounds adjusted in Icon Studio, retaining reproducible sources and parameters
 
 #### v1.0.3
 
