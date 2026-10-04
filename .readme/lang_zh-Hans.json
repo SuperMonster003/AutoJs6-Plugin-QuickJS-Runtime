@@ -51,5 +51,6 @@
   "text_link_quickjs_source": "QuickJS 源码仓库",
   "text_link_third_party_notices": "第三方声明",
   "p_instruction_backend": "此版本把固定的官方 QuickJS {{ quickjs_version }} 源码嵌入原生库, 并为每个请求创建全新运行时. 源码从不可变描述符读取; stdout, stderr, 错误, 取消, 限制和完成状态通过宿主契约返回.",
-  "p_instruction_more": "ABI 选择, 精确限制, 安全属性, 构建验证和完整 1.0 版本范围请参阅 [项目 README]({{ repo_url }})."
+  "p_instruction_more": "ABI 选择, 精确限制, 安全属性, 构建验证和完整 1.0 版本范围请参阅 [项目 README]({{ repo_url }}).",
+  "p_icon_artwork": "图标保留维护者提供的 [SVG 原稿]({{ icon_source_url }})及原始构图. 可通过 Icon Studio 调整, 使用 `python .python/generate_icon_studio.py --check` 复核配方与生成资源的一致性."
 }

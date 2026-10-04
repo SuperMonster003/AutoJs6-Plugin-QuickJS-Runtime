@@ -51,5 +51,6 @@
   "text_link_quickjs_source": "مستودع source الخاص بـ QuickJS",
   "text_link_third_party_notices": "إشعارات الطرف الثالث",
   "p_instruction_backend": "يضمن هذا release source QuickJS الرسمي المثبت {{ quickjs_version }} كمكتبة native وينشئ runtime جديدا لكل طلب. يقرأ source من immutable descriptor; وتعود stdout و stderr و errors و cancellation و limits و completion عبر عقد host.",
-  "p_instruction_more": "راجع [README المشروع]({{ repo_url }}) لاختيار ABI والحدود الدقيقة وخصائص الأمان والتحقق من البناء والنطاق الكامل للإصدار 1.0."
+  "p_instruction_more": "راجع [README المشروع]({{ repo_url }}) لاختيار ABI والحدود الدقيقة وخصائص الأمان والتحقق من البناء والنطاق الكامل للإصدار 1.0.",
+  "p_icon_artwork": "تحتفظ الأيقونة بملف [SVG الذي قدمه مسؤول المشروع]({{ icon_source_url }}) وتكوينه الأصلي. يمكن تعديلها باستخدام Icon Studio والتحقق من تطابق الوصفة والموارد المولدة بالأمر `python .python/generate_icon_studio.py --check`."
 }

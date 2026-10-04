@@ -51,5 +51,6 @@
   "text_link_quickjs_source": "Репозиторий исходников QuickJS",
   "text_link_third_party_notices": "Сторонние уведомления",
   "p_instruction_backend": "Этот release включает закрепленные официальные исходники QuickJS {{ quickjs_version }} как native library и создает новый runtime для каждого запроса. Source читается из immutable descriptor; stdout, stderr, errors, cancellation, limits и completion возвращаются через host contract.",
-  "p_instruction_more": "Выбор ABI, точные ограничения, свойства безопасности, проверка сборки и полная область версии 1.0 описаны в [README проекта]({{ repo_url }})."
+  "p_instruction_more": "Выбор ABI, точные ограничения, свойства безопасности, проверка сборки и полная область версии 1.0 описаны в [README проекта]({{ repo_url }}).",
+  "p_icon_artwork": "Значок сохраняет [SVG, предоставленный сопровождающим проекта]({{ icon_source_url }}), и исходную композицию. Настройте его в Icon Studio и проверьте соответствие рецепта ресурсам командой `python .python/generate_icon_studio.py --check`."
 }

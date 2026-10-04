@@ -4,6 +4,12 @@
 
 ******
 
+# v1.0.4
+
+###### 2026/10/04
+
+* `Amélioration` Les icônes de l'application et du centre de plugins utilisent un éclair coloré sur fond transparent, en conservant les proportions, marges, dégradés et ombres internes du SVG, avec une génération reproductible dans Icon Studio
+
 # v1.0.3
 
 ###### 2026/09/19

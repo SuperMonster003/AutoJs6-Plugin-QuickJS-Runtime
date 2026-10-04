@@ -51,5 +51,6 @@
   "text_link_quickjs_source": "QuickJS ソースリポジトリ",
   "text_link_third_party_notices": "サードパーティ通知",
   "p_instruction_backend": "この release は固定した公式 QuickJS {{ quickjs_version }} source を native library に埋め込み, リクエストごとに新しい runtime を作成します. Source は immutable descriptor から読み, stdout, stderr, error, cancellation, limit, completion は host contract を通して返ります.",
-  "p_instruction_more": "ABI 選択, 正確な制限, security property, build verification, バージョン 1.0 の全範囲は [project README]({{ repo_url }}) を参照してください."
+  "p_instruction_more": "ABI 選択, 正確な制限, security property, build verification, バージョン 1.0 の全範囲は [project README]({{ repo_url }}) を参照してください.",
+  "p_icon_artwork": "アイコンは管理者提供の [SVG 原稿]({{ icon_source_url }}) と元の構図を保持しています. Icon Studio で調整し, `python .python/generate_icon_studio.py --check` でレシピと生成リソースの一致を確認できます."
 }

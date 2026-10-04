@@ -2,7 +2,10 @@
 
 <div align="center">
   <p>
-    <img src="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap/ic_launcher.png" alt="QuickJS Runtime" border="0" width="128" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap-night/ic_launcher.png" />
+      <img src="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap/ic_launcher.png" alt="QuickJS Runtime" border="0" width="128" />
+    </picture>
   </p>
 
   <p>在独立 Android 进程中使用独立 QuickJS 引擎运行 JavaScript</p>
@@ -131,6 +134,12 @@ default stack limit: 1 MiB
 
 ******
 
+#### v1.0.4
+
+_2026/10/04_
+
+- `改进` 应用与插件中心图标采用透明彩色闪电, 保留 SVG 原稿的比例, 留白, 渐变和内部阴影, 并支持通过 Icon Studio 重建和调整
+
 #### v1.0.3
 
 _2026/09/19_
@@ -143,13 +152,6 @@ _2026/09/19_
 _2026/09/13_
 
 - `修复` 插件信息中的构建日期受构建环境语言影响, 未统一使用英文格式的问题
-
-#### v1.0.1
-
-_2026/09/13_
-
-- `改进` 构建阶段校验 64 位原生库的 16 KB 内存页对齐及 Manifest 配置, 并输出校验报告
-- `改进` 统一宿主激活流程, 插件信息及多语言文档, 并完善签名发布校验
 
 ##### 更多发布历史
 
@@ -190,6 +192,8 @@ app/src/main/assets/doc/CHANGELOG-*.md
 app/src/main/res/values*/strings.xml
 app/src/main/res/raw*/plugin_instruction.md
 ```
+
+图标保留维护者提供的 [SVG 原稿](https://github.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/blob/master/.python/icons/quickjs-runtime-lightning.svg)及原始构图. 可通过 Icon Studio 调整, 使用 `python .python/generate_icon_studio.py --check` 复核配方与生成资源的一致性.
 
 ******
 

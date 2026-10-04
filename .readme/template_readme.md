@@ -2,7 +2,10 @@
 
 <div align="center">
   <p>
-    <img src="{{ icon_url }}" alt="{{ icon_alt }}" border="0" width="128" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="{{ night_icon_url }}" />
+      <img src="{{ icon_url }}" alt="{{ icon_alt }}" border="0" width="128" />
+    </picture>
   </p>
 
   <p>{{ text_plugin_synopsis }}</p>
@@ -153,6 +156,8 @@ app/src/main/assets/doc/CHANGELOG-*.md
 app/src/main/res/values*/strings.xml
 app/src/main/res/raw*/plugin_instruction.md
 ```
+
+{{ p_icon_artwork }}
 
 ******
 
