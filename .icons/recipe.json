@@ -15,31 +15,31 @@
     },
     "geometry": {
       "mode": "preserve",
-      "scale": 1.0,
-      "offsetX": 0.0,
-      "offsetY": 0.0
+      "scale": 0.885,
+      "offsetX": 0.015,
+      "offsetY": 0
     },
     "day": {
       "mode": "original",
       "foreground": "#272727",
-      "brightness": 1.0,
-      "contrast": 1.0,
-      "gamma": 1.0,
+      "brightness": 1,
+      "contrast": 1,
+      "gamma": 1,
       "threshold": 128,
       "invert": false
     },
     "night": {
       "mode": "original",
       "foreground": "#d8d8d8",
-      "brightness": 1.0,
-      "contrast": 1.0,
-      "gamma": 1.0,
+      "brightness": 1,
+      "contrast": 1,
+      "gamma": 1,
       "threshold": 128,
       "invert": false
     },
     "backgrounds": {
       "day": "transparent",
-      "night": "transparent"
+      "night": "#280000"
     }
   },
   "baseline": {

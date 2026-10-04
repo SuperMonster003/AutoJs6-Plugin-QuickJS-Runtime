@@ -139,6 +139,7 @@ default stack limit: 1 MiB
 _2026/10/04_
 
 - `Amélioration` Les icônes de l'application et du centre de plugins utilisent un éclair coloré sur fond transparent, en conservant les proportions, marges, dégradés et ombres internes du SVG, avec une génération reproductible dans Icon Studio
+- `Amélioration` Les icônes du centre de plugins utilisent les tailles, positions, images claires et sombres et fonds circulaires réglés dans Icon Studio, avec les sources et paramètres permettant de les reproduire
 
 #### v1.0.3
 

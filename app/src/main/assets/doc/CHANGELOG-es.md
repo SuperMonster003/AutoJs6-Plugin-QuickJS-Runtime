@@ -9,6 +9,7 @@
 ###### 2026/10/04
 
 * `Mejora` Los iconos de la aplicación y del centro de plugins usan un rayo de color con fondo transparente, conservando las proporciones, márgenes, degradados y sombras internas del SVG, con generación reproducible en Icon Studio
+* `Mejora` Los iconos del centro de plugins usan los tamaños, posiciones, imágenes claras y oscuras y fondos circulares ajustados en Icon Studio, conservando fuentes y parámetros reproducibles
 
 # v1.0.3
 
