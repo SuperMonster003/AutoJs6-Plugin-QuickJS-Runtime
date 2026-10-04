@@ -2,7 +2,10 @@
 
 <div align="center">
   <p>
-    <img src="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap/ic_launcher.png" alt="QuickJS Runtime" border="0" width="128" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap-night/ic_launcher.png" />
+      <img src="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap/ic_launcher.png" alt="QuickJS Runtime" border="0" width="128" />
+    </picture>
   </p>
 
   <p>Runs JavaScript with an independent QuickJS engine in an isolated Android process</p>
@@ -131,6 +134,12 @@ default stack limit: 1 MiB
 
 ******
 
+#### v1.0.4
+
+_2026/10/04_
+
+- `Improvement` Application and Plugin Center icons use a transparent colored lightning bolt, preserving the SVG proportions, spacing, gradients and inner shading, with reproducible Icon Studio adjustments
+
 #### v1.0.3
 
 _2026/09/19_
@@ -143,13 +152,6 @@ _2026/09/19_
 _2026/09/13_
 
 - `Fix` Use English build dates in plugin metadata regardless of the build machine locale
-
-#### v1.0.1
-
-_2026/09/13_
-
-- `Improvement` Build verification of 16 KB page alignment for 64-bit native libraries, including manifest contract checks and JSON reports
-- `Improvement` Host activation, plugin metadata, localized documentation and signed release collection follow the common plugin conventions
 
 ##### For more release history
 
@@ -190,6 +192,8 @@ app/src/main/assets/doc/CHANGELOG-*.md
 app/src/main/res/values*/strings.xml
 app/src/main/res/raw*/plugin_instruction.md
 ```
+
+The icon preserves the [SVG supplied by the maintainer](https://github.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/blob/master/.python/icons/quickjs-runtime-lightning.svg) and its original composition. Adjust it with Icon Studio and verify the recipe and generated resources using `python .python/generate_icon_studio.py --check`.
 
 ******
 

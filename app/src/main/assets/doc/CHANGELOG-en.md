@@ -4,6 +4,12 @@
 
 ******
 
+# v1.0.4
+
+###### 2026/10/04
+
+* `Improvement` Application and Plugin Center icons use a transparent colored lightning bolt, preserving the SVG proportions, spacing, gradients and inner shading, with reproducible Icon Studio adjustments
+
 # v1.0.3
 
 ###### 2026/09/19

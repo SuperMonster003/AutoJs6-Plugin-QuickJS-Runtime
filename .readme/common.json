@@ -3,6 +3,7 @@
   "repo_slug": "SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime",
   "icon_alt": "QuickJS Runtime",
   "icon_url": "https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap/ic_launcher.png",
+  "night_icon_url": "https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap-night/ic_launcher.png",
   "autojs6_url": "https://github.com/SuperMonster003/AutoJs6",
   "quickjs_official_url": "https://bellard.org/quickjs/",
   "quickjs_documentation_url": "https://bellard.org/quickjs/quickjs.html",
@@ -33,5 +34,6 @@
   "default_timeout": "60 seconds",
   "default_memory_limit": "64 MiB",
   "maximum_memory_limit": "256 MiB",
-  "default_stack_limit": "1 MiB"
+  "default_stack_limit": "1 MiB",
+  "icon_source_url": "https://github.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/blob/master/.python/icons/quickjs-runtime-lightning.svg"
 }

@@ -2,7 +2,10 @@
 
 <div align="center">
   <p>
-    <img src="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap/ic_launcher.png" alt="QuickJS Runtime" border="0" width="128" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap-night/ic_launcher.png" />
+      <img src="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap/ic_launcher.png" alt="QuickJS Runtime" border="0" width="128" />
+    </picture>
   </p>
 
   <p>独立した Android プロセスで独立 QuickJS エンジンを使用して JavaScript を実行</p>
@@ -131,6 +134,12 @@ default stack limit: 1 MiB
 
 ******
 
+#### v1.0.4
+
+_2026/10/04_
+
+- `改善` アプリとプラグインセンターのアイコンに透明背景のカラー稲妻を使用し, SVG 原稿の比率, 余白, グラデーションと内側の陰影を維持, Icon Studio による再生成と調整に対応
+
 #### v1.0.3
 
 _2026/09/19_
@@ -143,13 +152,6 @@ _2026/09/19_
 _2026/09/13_
 
 - `修正` ビルド環境の言語にかかわらずプラグインのビルド日付を英語に統一
-
-#### v1.0.1
-
-_2026/09/13_
-
-- `改善` 64 ビットのネイティブライブラリの 16 KB ページアラインメントをビルド時に検証, manifest 契約の検査と JSON レポートに対応
-- `改善` ホストからの有効化, メタデータ, 多言語文書および署名済み APK の収集を共通規約に統一
 
 ##### その他のリリース履歴
 
@@ -190,6 +192,8 @@ app/src/main/assets/doc/CHANGELOG-*.md
 app/src/main/res/values*/strings.xml
 app/src/main/res/raw*/plugin_instruction.md
 ```
+
+アイコンは管理者提供の [SVG 原稿](https://github.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/blob/master/.python/icons/quickjs-runtime-lightning.svg) と元の構図を保持しています. Icon Studio で調整し, `python .python/generate_icon_studio.py --check` でレシピと生成リソースの一致を確認できます.
 
 ******
 

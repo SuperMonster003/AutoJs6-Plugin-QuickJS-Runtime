@@ -51,5 +51,6 @@
   "text_link_quickjs_source": "QuickJS source repository",
   "text_link_third_party_notices": "Third-party notices",
   "p_instruction_backend": "This release embeds the pinned official QuickJS {{ quickjs_version }} source as a native library and creates a fresh runtime for every request. Source is read from an immutable descriptor; stdout, stderr, errors, cancellation, limits, and completion return through the host contract.",
-  "p_instruction_more": "See the [project README]({{ repo_url }}) for ABI selection, exact limits, security properties, build verification, and the complete version 1.0 scope."
+  "p_instruction_more": "See the [project README]({{ repo_url }}) for ABI selection, exact limits, security properties, build verification, and the complete version 1.0 scope.",
+  "p_icon_artwork": "The icon preserves the [SVG supplied by the maintainer]({{ icon_source_url }}) and its original composition. Adjust it with Icon Studio and verify the recipe and generated resources using `python .python/generate_icon_studio.py --check`."
 }

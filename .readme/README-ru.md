@@ -2,7 +2,10 @@
 
 <div align="center">
   <p>
-    <img src="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap/ic_launcher.png" alt="QuickJS Runtime" border="0" width="128" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap-night/ic_launcher.png" />
+      <img src="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap/ic_launcher.png" alt="QuickJS Runtime" border="0" width="128" />
+    </picture>
   </p>
 
   <p>Запускает JavaScript в независимом движке QuickJS в изолированном процессе Android</p>
@@ -131,6 +134,12 @@ default stack limit: 1 MiB
 
 ******
 
+#### v1.0.4
+
+_2026/10/04_
+
+- `Улучшение` Значки приложения и центра плагинов используют цветную молнию с прозрачным фоном, сохраняя пропорции, отступы, градиенты и внутренние тени SVG, с воспроизводимой генерацией и настройкой в Icon Studio
+
 #### v1.0.3
 
 _2026/09/19_
@@ -143,13 +152,6 @@ _2026/09/19_
 _2026/09/13_
 
 - `Исправление` Дата сборки в метаданных всегда записывается на английском независимо от языка системы
-
-#### v1.0.1
-
-_2026/09/13_
-
-- `Улучшение` Проверка выравнивания страниц 16 KB для 64-битных нативных библиотек при сборке, включая контракт manifest и отчеты JSON
-- `Улучшение` Активация из хоста, метаданные, переведенная документация и сборка подписанных APK приведены к общим правилам
 
 ##### Дополнительная история выпусков
 
@@ -190,6 +192,8 @@ app/src/main/assets/doc/CHANGELOG-*.md
 app/src/main/res/values*/strings.xml
 app/src/main/res/raw*/plugin_instruction.md
 ```
+
+Значок сохраняет [SVG, предоставленный сопровождающим проекта](https://github.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/blob/master/.python/icons/quickjs-runtime-lightning.svg), и исходную композицию. Настройте его в Icon Studio и проверьте соответствие рецепта ресурсам командой `python .python/generate_icon_studio.py --check`.
 
 ******
 

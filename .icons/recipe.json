@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "generatorVersion": "1.2.0",
+  "profile": "catalog",
+  "repository": "AutoJs6-Plugin-QuickJS-Runtime",
+  "packages": [
+    "io.github.supermonster003.autojs6.plugin.quickjs.runtime"
+  ],
+  "launcher": false,
+  "params": {
+    "sources": {
+      "day": "1e1c86af7300d5fe2d7b0e3192047968659439f0e2bc7cd715c49b3fd1affb4d",
+      "night": "1e1c86af7300d5fe2d7b0e3192047968659439f0e2bc7cd715c49b3fd1affb4d",
+      "alphaMode": "alpha"
+    },
+    "geometry": {
+      "mode": "preserve",
+      "scale": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "day": {
+      "mode": "original",
+      "foreground": "#272727",
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "gamma": 1.0,
+      "threshold": 128,
+      "invert": false
+    },
+    "night": {
+      "mode": "original",
+      "foreground": "#d8d8d8",
+      "brightness": 1.0,
+      "contrast": 1.0,
+      "gamma": 1.0,
+      "threshold": 128,
+      "invert": false
+    },
+    "backgrounds": {
+      "day": "transparent",
+      "night": "transparent"
+    }
+  },
+  "baseline": {
+    "params": {
+      "sources": {
+        "day": "046fd8126a59ade71e250b17b5d4d4eb1ae6ef6220584d32c6c22c8f8ac0d64b",
+        "night": "046fd8126a59ade71e250b17b5d4d4eb1ae6ef6220584d32c6c22c8f8ac0d64b",
+        "alphaMode": "alpha"
+      },
+      "geometry": {
+        "mode": "preserve",
+        "scale": 1.0,
+        "offsetX": 0.0,
+        "offsetY": 0.0
+      },
+      "day": {
+        "mode": "original",
+        "foreground": "#272727",
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "gamma": 1.0,
+        "threshold": 128,
+        "invert": false
+      },
+      "night": {
+        "mode": "original",
+        "foreground": "#d8d8d8",
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "gamma": 1.0,
+        "threshold": 128,
+        "invert": false
+      },
+      "backgrounds": {
+        "day": "transparent",
+        "night": "transparent"
+      }
+    },
+    "day": "046fd8126a59ade71e250b17b5d4d4eb1ae6ef6220584d32c6c22c8f8ac0d64b",
+    "night": "046fd8126a59ade71e250b17b5d4d4eb1ae6ef6220584d32c6c22c8f8ac0d64b"
+  },
+  "outputs": {
+    "app/src/main/res/mipmap/ic_plugin_center.png": {
+      "role": "ui-day"
+    },
+    "app/src/main/res/mipmap-night/ic_plugin_center.png": {
+      "role": "ui-night"
+    },
+    "app/src/main/res/raw/keep_plugin_center_icon.xml": {
+      "role": "keep-rule"
+    },
+    "app/src/main/res/values/icon_studio_backgrounds.xml": {
+      "role": "background-color",
+      "theme": "day"
+    },
+    "app/src/main/res/values-night/icon_studio_backgrounds.xml": {
+      "role": "background-color",
+      "theme": "night"
+    },
+    "app/src/main/res/raw/keep_icon_studio_background.xml": {
+      "role": "background-keep"
+    },
+    "app/src/main/res/mipmap/ic_launcher.png": {
+      "role": "ui-day",
+      "original": "046fd8126a59ade71e250b17b5d4d4eb1ae6ef6220584d32c6c22c8f8ac0d64b"
+    },
+    "app/src/main/res/mipmap-night/ic_launcher.png": {
+      "role": "ui-night"
+    }
+  },
+  "assets": [
+    "046fd8126a59ade71e250b17b5d4d4eb1ae6ef6220584d32c6c22c8f8ac0d64b",
+    "1e1c86af7300d5fe2d7b0e3192047968659439f0e2bc7cd715c49b3fd1affb4d",
+    "35cae5b1c35a82a441d15889d0d1a4d83bc59e3b8cc12f457b2283d5493f018c"
+  ],
+  "legacyGenerator": null,
+  "backgroundDefaults": {
+    "day": "transparent",
+    "night": "transparent"
+  },
+  "originalSources": {
+    "1e1c86af7300d5fe2d7b0e3192047968659439f0e2bc7cd715c49b3fd1affb4d": {
+      "asset": "35cae5b1c35a82a441d15889d0d1a4d83bc59e3b8cc12f457b2283d5493f018c",
+      "filename": "quickjs-runtime-lightning.svg"
+    }
+  }
+}

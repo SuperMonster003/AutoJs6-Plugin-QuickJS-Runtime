@@ -5,6 +5,12 @@
   "changelog_label_improvement": "改善",
   "changelog_label_dependency": "依存関係",
   "$data": {
+    "v1.0.4": {
+      "released_date": "2026/10/04",
+      "improvement": [
+        "アプリとプラグインセンターのアイコンに透明背景のカラー稲妻を使用し, SVG 原稿の比率, 余白, グラデーションと内側の陰影を維持, Icon Studio による再生成と調整に対応"
+      ]
+    },
     "v1.0.3": {
       "released_date": "2026/09/19",
       "improvement": [

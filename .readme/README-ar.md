@@ -2,7 +2,10 @@
 
 <div align="center">
   <p>
-    <img src="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap/ic_launcher.png" alt="QuickJS Runtime" border="0" width="128" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap-night/ic_launcher.png" />
+      <img src="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap/ic_launcher.png" alt="QuickJS Runtime" border="0" width="128" />
+    </picture>
   </p>
 
   <p>يشغل JavaScript بمحرك QuickJS مستقل داخل عملية Android معزولة</p>
@@ -131,6 +134,12 @@ default stack limit: 1 MiB
 
 ******
 
+#### v1.0.4
+
+_2026/10/04_
+
+- `تحسين` تستخدم أيقونات التطبيق ومركز الملحقات صاعقة ملونة بخلفية شفافة مع الحفاظ على نسب SVG والهوامش والتدرجات والظلال الداخلية ودعم إعادة التوليد والتعديل عبر Icon Studio
+
 #### v1.0.3
 
 _2026/09/19_
@@ -143,13 +152,6 @@ _2026/09/19_
 _2026/09/13_
 
 - `إصلاح` استخدام تواريخ بناء باللغة الإنجليزية في بيانات المكون بغض النظر عن لغة جهاز البناء
-
-#### v1.0.1
-
-_2026/09/13_
-
-- `تحسين` التحقق أثناء البناء من محاذاة صفحات 16 KB للمكتبات الأصلية ذات 64 بت, مع فحص عقد manifest وتقارير JSON
-- `تحسين` توحيد تنشيط المضيف وبيانات الإضافة والوثائق المترجمة وتجميع إصدارات APK الموقعة وفق قواعد الإضافات المشتركة
 
 ##### لمزيد من سجل الإصدارات
 
@@ -190,6 +192,8 @@ app/src/main/assets/doc/CHANGELOG-*.md
 app/src/main/res/values*/strings.xml
 app/src/main/res/raw*/plugin_instruction.md
 ```
+
+تحتفظ الأيقونة بملف [SVG الذي قدمه مسؤول المشروع](https://github.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/blob/master/.python/icons/quickjs-runtime-lightning.svg) وتكوينه الأصلي. يمكن تعديلها باستخدام Icon Studio والتحقق من تطابق الوصفة والموارد المولدة بالأمر `python .python/generate_icon_studio.py --check`.
 
 ******
 

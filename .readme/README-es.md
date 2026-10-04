@@ -2,7 +2,10 @@
 
 <div align="center">
   <p>
-    <img src="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap/ic_launcher.png" alt="QuickJS Runtime" border="0" width="128" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap-night/ic_launcher.png" />
+      <img src="https://raw.githubusercontent.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/master/app/src/main/res/mipmap/ic_launcher.png" alt="QuickJS Runtime" border="0" width="128" />
+    </picture>
   </p>
 
   <p>Ejecuta JavaScript con un motor QuickJS independiente en un proceso Android aislado</p>
@@ -131,6 +134,12 @@ Estado de 16 KB: el linker nativo usa un tamaño máximo de página de 16 KB y e
 
 ******
 
+#### v1.0.4
+
+_2026/10/04_
+
+- `Mejora` Los iconos de la aplicación y del centro de plugins usan un rayo de color con fondo transparente, conservando las proporciones, márgenes, degradados y sombras internas del SVG, con generación reproducible en Icon Studio
+
 #### v1.0.3
 
 _2026/09/19_
@@ -143,13 +152,6 @@ _2026/09/19_
 _2026/09/13_
 
 - `Corrección` Usar fechas de compilación en inglés independientemente del idioma de la máquina
-
-#### v1.0.1
-
-_2026/09/13_
-
-- `Mejora` Verificación de compilación de la alineación de páginas de 16 KB en bibliotecas nativas de 64 bits, con controles del contrato manifest e informes JSON
-- `Mejora` Activación del host, metadatos, documentación traducida y recopilación de APK firmados conforme a las convenciones comunes
 
 ##### Más historial de versiones
 
@@ -190,6 +192,8 @@ app/src/main/assets/doc/CHANGELOG-*.md
 app/src/main/res/values*/strings.xml
 app/src/main/res/raw*/plugin_instruction.md
 ```
+
+El icono conserva el [SVG proporcionado por el mantenedor](https://github.com/SuperMonster003/AutoJs6-Plugin-QuickJS-Runtime/blob/master/.python/icons/quickjs-runtime-lightning.svg) y su composición original. Ajústelo con Icon Studio y compruebe la receta y los recursos generados con `python .python/generate_icon_studio.py --check`.
 
 ******
 
