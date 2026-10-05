@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatorVersion": "1.2.0",
+  "generatorVersion": "1.3.0",
   "profile": "catalog",
   "repository": "AutoJs6-Plugin-QuickJS-Runtime",
   "packages": [
@@ -108,6 +108,30 @@
     },
     "app/src/main/res/mipmap-night/ic_launcher.png": {
       "role": "ui-night"
+    },
+    "app/src/main/res/mipmap/ic_icon_studio_application.png": {
+      "role": "legacy-day"
+    },
+    "app/src/main/res/mipmap-night/ic_icon_studio_application.png": {
+      "role": "legacy-night"
+    },
+    "app/src/main/res/mipmap/ic_icon_studio_application_foreground.png": {
+      "role": "adaptive-day"
+    },
+    "app/src/main/res/mipmap-night/ic_icon_studio_application_foreground.png": {
+      "role": "adaptive-night"
+    },
+    "app/src/main/res/mipmap/ic_icon_studio_application_monochrome.png": {
+      "role": "mono"
+    },
+    "app/src/main/res/mipmap-anydpi-v26/ic_icon_studio_application.xml": {
+      "role": "application-adaptive"
+    },
+    "app/src/main/res/mipmap-night-anydpi-v26/ic_icon_studio_application.xml": {
+      "role": "application-adaptive"
+    },
+    "app/src/main/res/raw/keep_icon_studio_application.xml": {
+      "role": "application-keep"
     }
   },
   "assets": [
@@ -118,12 +142,15 @@
   "legacyGenerator": null,
   "backgroundDefaults": {
     "day": "transparent",
-    "night": "transparent"
+    "night": "#280000"
   },
   "originalSources": {
     "1e1c86af7300d5fe2d7b0e3192047968659439f0e2bc7cd715c49b3fd1affb4d": {
       "asset": "35cae5b1c35a82a441d15889d0d1a4d83bc59e3b8cc12f457b2283d5493f018c",
       "filename": "quickjs-runtime-lightning.svg"
     }
-  }
+  },
+  "systemIcon": true,
+  "systemIconMinSdk": 24,
+  "systemIconObsolete": []
 }

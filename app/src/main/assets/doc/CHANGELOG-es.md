@@ -6,10 +6,11 @@
 
 # v1.0.4
 
-###### 2026/10/04
+###### 2026/10/05
 
 * `Mejora` Los iconos de la aplicación y del centro de plugins usan un rayo de color con fondo transparente, conservando las proporciones, márgenes, degradados y sombras internas del SVG, con generación reproducible en Icon Studio
 * `Mejora` Los iconos del centro de plugins usan los tamaños, posiciones, imágenes claras y oscuras y fondos circulares ajustados en Icon Studio, conservando fuentes y parámetros reproducibles
+* `Mejora` Los iconos de información de la aplicación de Android comparten las imágenes y los fondos claros y oscuros de Icon Studio, conservando las imágenes transparentes del centro de plugins y las opciones del lanzador
 
 # v1.0.3
 

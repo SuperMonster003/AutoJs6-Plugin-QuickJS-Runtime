@@ -6,10 +6,11 @@
 
 # v1.0.4
 
-###### 2026/10/04
+###### 2026/10/05
 
 * `Improvement` Application and Plugin Center icons use a transparent colored lightning bolt, preserving the SVG proportions, spacing, gradients and inner shading, with reproducible Icon Studio adjustments
 * `Improvement` Plugin Center icons use the sizes, positions, light and dark artwork, and circular backgrounds adjusted in Icon Studio, retaining reproducible sources and parameters
+* `Improvement` Android App info icons share Icon Studio artwork and light/dark backgrounds while preserving transparent Plugin Center artwork and existing launcher choices
 
 # v1.0.3
 
