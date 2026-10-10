@@ -62,3 +62,6 @@ __pycache__/
 *.pre-platform-versions.bak
 
 /app/releases/
+
+# Local agent instruction files stay out of the repository.
+CLAUDE.md
