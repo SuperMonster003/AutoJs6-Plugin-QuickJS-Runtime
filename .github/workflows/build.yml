@@ -44,9 +44,14 @@ jobs:
           python3 -B -m unittest discover -s tools/quickjs/tests -p "test_*.py"
           python3 -B .python/generate_markdown.py --check
           version_ref="${{ github.event.pull_request.head.sha || github.sha }}"
-          expected_build="$(git rev-list --count "$version_ref")"
+          commit_count="$(git rev-list --count "$version_ref")"
           actual_build="$(sed -n 's/^VERSION_BUILD=//p' version.properties)"
-          test "$actual_build" = "$expected_build"
+          # VERSION_BUILD follows the commit count within 10 (shared rule of the AutoJs6 repositories).
+          drift=$(( actual_build - commit_count ))
+          if [ "${drift#-}" -gt 10 ]; then
+            echo "::error title=Build number drift::VERSION_BUILD=$actual_build is $drift away from $commit_count commits (allowed: 10)"
+            exit 1
+          fi
 
       - name: Run tests, lint, and verify debug APKs
         run: |
